@@ -1,0 +1,297 @@
+html, body {
+  font-size: 16px;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif; }
+
+.container {
+  max-width: 1440px;
+  text-align: center; }
+
+.title, .sub-heading {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none;
+  text-transform: uppercase; }
+
+p {
+  color: rgba(0, 0, 0, 0.6); }
+
+.section-heading {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 2em; }
+
+.sub-heading {
+  font-size: 1.2rem; }
+
+.button {
+  background: #ffffff;
+  color: rgba(0, 0, 0, 0.87);
+  padding: 0.5em 3.2em;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  border-radius: 0;
+  text-align: center; }
+  .button:hover, .button:focus {
+    color: #ffffff;
+    text-decoration: none;
+    background: #f74300;
+    text-decoration: none;
+    -webkit-box-shadow: 0 0 57px 0 rgba(4, 6, 9, 0.25);
+    -moz-box-shadow: 0 0 57px 0 rgba(4, 6, 9, 0.25);
+    box-shadow: 0 0 57px 0 rgba(4, 6, 9, 0.25); }
+
+.nav, .navbar {
+  margin: 0;
+  background: transparent;
+  height: 3rem;
+  border: none; }
+  .nav .container, .navbar .container {
+    align-self: center;
+    width: 90%;
+    padding-top: 1em; }
+  .nav #navbar-logo, .navbar #navbar-logo {
+    font-size: 1.5rem;
+    font-weight: 100;
+    align-self: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    float: left; }
+  .nav #navbar-links, .navbar #navbar-links {
+    list-style: none;
+    float: right; }
+    .nav #navbar-links li, .navbar #navbar-links li {
+      padding: 0;
+      align-self: center; }
+      .nav #navbar-links li a, .navbar #navbar-links li a {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        color: #b1b1b1; }
+        .nav #navbar-links li a:hover, .nav #navbar-links li a:focus, .navbar #navbar-links li a:hover, .navbar #navbar-links li a:focus {
+          color: #f74300; }
+
+.navbar-small {
+  height: 1.25em;
+  background: #fff;
+  box-shadow: 0rem 0.1rem 0.5rem rgba(0, 0, 0, 0.35);
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.87); }
+  .navbar-small .container {
+    padding: 0;
+    align-self: center; }
+  .navbar-small #navbar-links li a {
+    color: rgba(0, 0, 0, 0.87); }
+  .navbar-small #navbar-links:hover, .navbar-small #navbar-links:focus {
+    color: #f74300; }
+  .navbar-small #navbar-logo {
+    color: rgba(0, 0, 0, 0.87); }
+    .navbar-small #navbar-logo:hover, .navbar-small #navbar-logo:focus {
+      color: #f74300; }
+
+#home {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/header_background.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; }
+  #home .heading_content {
+    position: absolute; }
+    #home .heading_content .title, #home .heading_content .sub-heading {
+      margin: 1.5em;
+      color: #ffffff; }
+    #home .heading_content .title {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 6rem;
+      padding: 0.3em;
+      margin: 0.3em;
+      border: solid 0.3rem #ffffff;
+      border-spacing: 0.3em; }
+    #home .heading_content .sub-heading {
+      font-weight: 300;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 0.5em;
+      padding-bottom: 1em; }
+    #home .heading_content .home_button {
+      margin-top: 5rem; }
+  #home #down_chevron {
+    color: rgba(255, 255, 255, 0.75);
+    position: absolute;
+    bottom: 5%; }
+    #home #down_chevron:hover, #home #down_chevron:focus {
+      font-size: 1.3em;
+      color: #f74300; }
+      #home #down_chevron:hover #down_chevron::before, #home #down_chevron:focus #down_chevron::before {
+        content: "Viac";
+        color: rgba(255, 255, 255, 0.75); }
+
+#about {
+  margin: 0 auto;
+  display: block; }
+  #about .section-heading {
+    padding: 2em; }
+  #about .section-heading::after {
+    content: "";
+    height: 1px;
+    max-width: 1.5em;
+    display: block;
+    margin: 0.5em auto;
+    background: #f74300; }
+  #about .about-item-row {
+    margin: 6em auto;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    -webkit-justify-content: space-between; }
+    #about .about-item-row .about-item {
+      background: #fff;
+      border: 1px solid #f8f8f8;
+      box-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.35);
+      width: 27%;
+      margin: 0 2em; }
+      #about .about-item-row .about-item:hover {
+        transform: translate3d(0, -10px, 0);
+        box-shadow: 0 22px 43px rgba(0, 0, 0, 0.35); }
+      #about .about-item-row .about-item .about-item-content {
+        padding: 5em 4em; }
+        #about .about-item-row .about-item .about-item-content .sub-title {
+          color: rgba(0, 0, 0, 0.87);
+          padding-bottom: 1em; }
+        #about .about-item-row .about-item .about-item-content a {
+          padding-top: 2em;
+          margin-top: 2em;
+          text-decoration: none;
+          color: #f74300; }
+  #about .btn-row {
+    margin: 3em; }
+    #about .btn-row .button {
+      border: 1px solid #f74300; }
+
+#first_window {
+  height: 200px;
+  background-image: url(../images/first.jpg); }
+
+#services {
+  background: #f8f8f8; }
+
+#references {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../images/header.jpg); }
+
+#mapp {
+  width: 100%;
+  padding: 3em;
+  margin: 2em;
+  height: 400px; }
+
+#contact {
+  width: 100%; }
+  #contact .contact-info {
+    margin-bottom: 5em; }
+    #contact .contact-info .contact-info-item i {
+      font-size: 2rem;
+      color: #f74300; }
+  #contact .middle-item {
+    border-left: 1px solid #cfcfcf;
+    border-right: 1px solid #cfcfcf; }
+  #contact #mail {
+    padding: 4em auto; }
+    #contact #mail .email-input {
+      margin-top: 5em; }
+    #contact #mail input {
+      margin: 2em auto;
+      border-radius: 0;
+      height: 3.25em;
+      background: #fbfbfb; }
+      #contact #mail input:hover, #contact #mail input:focus {
+        -moz-box-shadow: none;
+        outline: none;
+        border-style: none;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        border: 1px solid #f74300; }
+    #contact #mail #form_text_field {
+      border-radius: 0;
+      margin: 0.75em auto;
+      width: 100%;
+      background: #fbfbfb; }
+      #contact #mail #form_text_field:hover, #contact #mail #form_text_field:focus {
+        resize: none;
+        outline: none;
+        border-style: none;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        border: 1px solid #f74300; }
+    #contact #mail .btn {
+      background: #fff;
+      border: 1px solid #f74300;
+      width: 100%;
+      color: rgba(0, 0, 0, 0.87);
+      font-size: 1.1rem;
+      font-weight: 700; }
+      #contact #mail .btn:hover, #contact #mail .btn:focus {
+        box-shadow: 0 0.5rem 0.5em rgba(0, 0, 0, 0.15);
+        transform: translateY(-2px);
+        background: #f74300;
+        color: #fff; }
+
+#map {
+  width: 100%;
+  margin-top: 5rem;
+  height: 400px;
+  margin: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); }
+
+.large-window {
+  margin: 0;
+  padding: 0;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-reapeat;
+  background-attachment: fixed; }
+
+footer {
+  background: rgba(0, 0, 0, 0.87);
+  font-size: 2.35rem;
+  text-align: center;
+  align-items: center; }
+  footer .fa {
+    color: #ffffff;
+    font-weight: 400;
+    padding: 1em 2em; }
+    footer .fa:hover, footer .fa:focus {
+      color: #f74300; }
+  footer .contact-list {
+    list-style: none;
+    margin: 0;
+    padding-top: 0.75em; }
+    footer .contact-list li {
+      display: inline; }
+  footer .copyright {
+    padding-bottom: 1em;
+    margin: 0;
+    color: #f8f8f8;
+    font-size: 0.25em; }
+
+/*# sourceMappingURL=main.css.map */

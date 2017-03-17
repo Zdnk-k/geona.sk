@@ -1,0 +1,372 @@
+$main: rgba(#000000, 0.87)
+$text: rgba(#000000, 0.60)
+$shadow: rgba(#000000, 0.35)
+$white:#ffffff
+$whiteish: rgba(#fff, 0.75 )
+$uber_light_grey: #f8f8f8
+$orange: #f74300
+$nav-title: #b1b1b1
+
+$input-border-focus: $orange
+
+html, body
+  font-size: 16px
+  height: 100%
+  width: 100%
+  margin: 0
+  padding: 0
+  font-family: Roboto, sans-serif
+
+.container
+  max-width: 1440px
+  text-align: center
+
+.title, .sub-heading
+  color: $main
+  text-decoration: none
+  text-transform: uppercase
+
+p
+  color: $text
+
+.section-heading
+  font-size: 1.5rem
+  text-transform: uppercase
+  font-weight: 700
+  padding: 2em
+
+.sub-heading
+  font-size: 1.2rem
+  // color: $text
+
+.button
+  background: $white
+  color: $main
+  padding: 0.5em 3.2em
+  font-weight: 700
+  text-decoration: none
+  border: none
+  outline: none
+  border-radius: 0
+  text-align: center
+  &:hover, &:focus
+    color: $white
+    text-decoration: none
+    background: $orange
+    text-decoration: none
+    -webkit-box-shadow: 0 0 57px 0 rgba(4, 6, 9, 0.25)
+    -moz-box-shadow: 0 0 57px 0 rgba(4, 6, 9, 0.25)
+    box-shadow: 0 0 57px 0 rgba(4, 6, 9, 0.25)
+
+// ================ navbar styles ================
+
+.nav, .navbar
+  margin: 0
+  background: transparent
+  height: 3rem
+  border: none
+
+
+  .container
+    align-self: center
+    width: 90%
+    padding-top: 1em
+
+  #navbar-logo
+    font-size: 1.5rem
+    font-weight: 100
+    align-self: center
+    color: $white
+    text-transform: uppercase
+    float: left
+
+  #navbar-links
+    list-style: none
+    float: right
+    li
+      padding: 0
+      align-self: center
+      a
+        font-size: 1.2rem
+        text-transform: uppercase
+        color: $nav-title
+        &:hover, &:focus
+          // color: #fff
+          color: #f74300
+
+
+
+
+
+// =============================== NAVBAR SMALL======================
+.navbar-small
+  height: 1.25em
+  background: #fff
+  box-shadow: 0rem 0.1rem 0.5rem $shadow
+  font-weight: 700
+  color: $main
+
+  .container
+    padding: 0
+    align-self: center
+  #navbar-links
+    li
+      a
+        color: $main
+    &:hover, &:focus
+      color: #f74300
+
+  #navbar-logo
+    color: $main
+    &:hover, &:focus
+      color: #f74300
+
+// ================ Home styles ================
+#home
+  background: linear-gradient( rgba(#000, 0.1), rgba(#000, 0.1) ), url("../images/header_background.jpg")
+  background-repeat: no-repeat
+  background-position: center bottom
+  background-size: cover
+  background-attachment: fixed
+  padding: 0
+  margin: 0
+  height: 100vh
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  text-align: center
+
+  .heading_content
+    position: absolute
+
+    .title, .sub-heading
+      margin: 1.5em
+      color: $white
+
+
+    .title
+      text-transform: uppercase
+      font-weight: 700
+      font-size: 6rem
+      padding: 0.3em
+      margin: 0.3em
+      border: solid 0.3rem $white
+      border-spacing: 0.3em
+
+    .sub-heading
+      font-weight: 300
+      text-transform: uppercase
+      color: $whiteish
+      margin-bottom: 0.5em
+      padding-bottom: 1em
+      // text-align: center
+
+
+    .home_button
+      margin-top: 5rem
+
+  #down_chevron
+    color: $whiteish
+    position: absolute
+    bottom: 5%
+    &:hover, &:focus
+      font-size: 1.3em
+      color: $orange
+      #down_chevron::before
+        content: "Viac"
+        color: $whiteish
+
+
+
+#about
+  margin: 0 auto
+  // background: $uber_light_grey
+  display: block
+
+  .section-heading
+    padding: 2em
+  .section-heading::after
+    content: ''
+    height: 1px
+    max-width: 1.5em
+    display: block
+    margin: 0.5em auto
+    background: $orange
+
+  .about-item-row
+    margin: 6em auto
+    display: flex
+    display: -webkit-flex
+    flex-flow: row wrap
+    // align-content: space-around
+    justify-content: space-between
+    -webkit-justify-content: space-between
+    .about-item
+      background: #fff
+      border: 1px solid $uber_light_grey
+      box-shadow: 0 0.1em 0.1em $shadow
+      // display: flex
+      // justify-content: center
+      width: 27%
+      margin: 0 2em
+      &:hover
+        transform: translate3d(0, -10px, 0)
+        box-shadow: 0 22px 43px $shadow
+      // width: 33%
+      .about-item-content
+        padding: 5em 4em
+        .sub-title
+          color: $main
+          padding-bottom: 1em
+        a
+          padding-top: 2em
+          margin-top: 2em
+          text-decoration: none
+          color: $orange
+
+  .btn-row
+    margin: 3em
+    .button
+      border: 1px solid $orange
+#first_window
+  height: 200px
+  background-image: url(../images/first.jpg)
+
+#services
+  background: $uber_light_grey
+
+#references
+  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ),url(../images/header.jpg)
+
+
+#mapp
+  width: 100%
+  padding: 3em
+  margin: 2em
+  height: 400px
+
+
+
+#contact
+  // background: $orange
+  width: 100%
+  .contact-info
+    margin-bottom: 5em
+    // padding: 3em auto
+    .contact-info-item
+      i
+        font-size: 2rem
+        color: $orange
+      .text-content
+  .middle-item
+    border-left: 1px solid #cfcfcf
+    border-right: 1px solid #cfcfcf
+
+
+
+  #mail
+    padding: 4em auto
+    .email-input
+      margin-top: 5em
+    input
+      margin: 2em auto
+      border-radius: 0
+      height: 3.25em
+      background: #fbfbfb
+      &:hover, &:focus
+        -moz-box-shadow: none
+        outline: none
+        border-style: none
+        box-shadow: none
+        -webkit-box-shadow: none
+        -moz-box-shadow: none
+        border: 1px solid $orange
+
+
+
+
+
+    #form_text_field
+      border-radius: 0
+      margin: 0.75em auto
+      width: 100%
+      background: #fbfbfb
+      &:hover, &:focus
+        resize: none
+        outline: none
+        border-style: none
+        box-shadow: none
+        -webkit-box-shadow: none
+        -moz-box-shadow: none
+        border: 1px solid $orange
+        // box-shadow: 0 0.5rem 0.5em rgba(0,0,0,.15)
+        // transform: translateY(-2px)
+        // animation-duration: 1s
+
+    .btn
+      background: #fff
+      // margin-bottom: 5rem
+      border: 1px solid $orange
+      width: 100%
+      color: $main
+      font-size: 1.1rem
+      font-weight: 700
+      &:hover, &:focus
+        box-shadow: 0 0.5rem 0.5em rgba(0,0,0,.15)
+        transform: translateY(-2px)
+        background: $orange
+        color: #fff
+
+#map
+  width: 100%
+  margin-top: 5rem
+  height: 400px
+  // padding: 3rem
+  margin: 0
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+
+
+
+.large-window
+  margin: 0
+  padding: 0
+  height: 500px
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  background:
+    size: cover
+    position: center
+    repeat: no-reapeat
+    attachment: fixed
+
+
+footer
+  background: $main
+  // padding: 0
+  // margin-top: 2e
+  font-size: 2.35rem
+  text-align: center
+  align-items: center
+
+  .fa
+    color: $white
+    font-weight: 400
+    padding: 1em 2em
+    &:hover, &:focus
+      color: $orange
+
+  .contact-list
+    list-style: none
+    margin: 0
+    padding-top: 0.75em
+    li
+      display: inline
+
+  .copyright
+    padding-bottom: 1em
+    margin: 0
+    color: $uber_light_grey
+    font-size: 0.25em
