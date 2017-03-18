@@ -2,12 +2,15 @@
 
 $(window).scroll(function() {
     if ($(document).scrollTop() > 200) {
-        $('nav').addClass('navbar-small');
+        $('nav').addClass('nav-fixed');
     } else {
-        $('nav').removeClass('navbar-small');
+        $('nav').removeClass('nav-fixed');
     }
+
+    setActNav();
 });
 
+  
 // smooth scroll
 $('a[href*="#"]:not([href="#"])').click(function() {
   if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -23,20 +26,14 @@ $('a[href*="#"]:not([href="#"])').click(function() {
 });
 
 
-$(function () {
-  setNavigation();
-});
-
-//nav position hightlight
-function setNavigation() {
-  var scrollLoc = window.location.href;
-
-  $(".nav a").each(function () {
-    var href = $(this).attr('href');
-    if (path.substring(0, href.length) == href) {
-      $(this).closest('li').addClass('active');
-    } else{
-      $(this).closest('li').removeClass('active');
-    }
-  });
-}
+// $(".page").each(function() {
+//     var bb = $(this).attr("id");
+//     var hei = $(this).outerHeight();
+//     var grttop = $(this).offset().top - 80;
+//
+//     if ($(window).scrollTop() > grttop - 1 && $(window).scrollTop() < grttop + hei - 1) {
+//         var uu = $(".navbar-nav>li>a[href='#" + bb + "']").parent().addClass("active");
+//     } else {
+//         var uu = $(".navbar-nav>li>a[href='#" + bb + "']").parent().removeClass("active");
+//     }
+// });
