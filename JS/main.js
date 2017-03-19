@@ -41,6 +41,9 @@ $('.count').each(function () {
 
 // TODO:add more when hover
 
+// show/hide
+$()
+
 
 // $(".page").each(function() {
 //     var bb = $(this).attr("id");

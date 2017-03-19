@@ -92,7 +92,7 @@
           </div>
           <div class="col-lg-4 col-md-6 about-item">
             <div class="about-item-content">
-              <i class="linea-icon icon-basic-lightbulb"></i>
+              <i class="linea-icon icon-basic-signs"></i>
               <h2 class="subtitle">Poradenstvo a služby</h2>
               <p class="text">pri vysporiadaní vlastníctva a zápise do katastra nehnutelnosti...</p>
               <a href="#services" class="learn-more">
@@ -110,6 +110,10 @@
               </a>
             </div>
           </div>
+        </div>
+        <div class="row btn-row">
+          <a href="#contact" class="button">kontaktujte nás
+          </a>
         </div>
       </div>
 
@@ -140,23 +144,23 @@
       <div class="container">
         <h1 class="section-heading">Naše služby</h1>
         <div class="row options-row">
-          <div class="serv-opt-holder col-lg-4 col-md-4 col-sm-4 col-xs-12 active-option">
-            <a id="serv-opt-1" href="#services"class="subtitle">
+          <div class="serv-opt-holder col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <p id="opt-serv-1" href="#serv-1" class="subtitle serv-opt">
               Geodetické práce v </br>katastri nehnuteľností
-            </a>
+            </p>
           </div>
           <div class="serv-opt-holder col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <a id="serv-opt-2" href="#services"class="subtitle">
+            <p id="opt-serv-2" href="#serv-2" class="subtitle serv-opt">
               Geodetické práce v </br>investičnej výstavbe
-            </a>
+            </p>
           </div>
           <div class="serv-opt-holder col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <a id="serv-opt-3" href="#services"class="subtitle">
+            <p id="opt-serv-3" href="#serv-3" class="subtitle serv-opt">
               Poradenstvo a služby pri vysporiadaní vlastníctva a zápise do katastra
-            </a>
+            </p>
           </div>
         </div>
-        <div id="serv-1"class="col-lg-12 col-md-12 col-sm-12 col-xs-12 shown-serv-row active">
+        <div id="serv-1"class="col-lg-12 col-md-12 col-sm-12 col-xs-12 shown-serv-row">
           <ol>
             <li>
               Geometrické plány:
@@ -299,12 +303,12 @@
           </div>
         </div>
       </div>
-``
-        <div class="row map-row">
-          <iframe id="map" class="col-lg-12 col-xs-12 col-md-12 col-sm-12" frameborder="0" style="border:0"
-            src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ3dC3HG5OOUcRF_soRkJZ-Wo&key=AIzaSyB5NoB3bdJfaXP2AqMqRWE4JyHUJdOlwVI" allowfullscreen>
-          </iframe>
-        </div>
+
+      <div class="row map-row">
+         <div class="overlay col-lg-12 col-xs-12 col-md-12 col-sm-12" onClick="style.pointerEvents='none'"></div>
+        <iframe id="map" class="col-lg-12 col-xs-12 col-md-12 col-sm-12" frameborder="0" style="border:0"
+          src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ3dC3HG5OOUcRF_soRkJZ-Wo&key=AIzaSyB5NoB3bdJfaXP2AqMqRWE4JyHUJdOlwVI" allowfullscreen>
+        </iframe>
       </div>
     </section>
 
@@ -333,6 +337,8 @@
     <!-- <script src="JS/bootstrap.min.js"></script> -->
     <!-- <script src="JS/jqquery.js"></script> -->
     <script src="JS/main.js"></script>
+    <script src="JS/script.js"></script>
+
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXnTDuATCwSp0l75F4wpwEJXUZdShpds0"></script>
     <!-- <script src="JS/gmap.js"></script> -->
   </body>

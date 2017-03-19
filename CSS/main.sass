@@ -40,6 +40,14 @@ html, body
 .subtitle
   font-size: 1.2rem
 
+a
+  text-decoration: none
+  color: $main
+  &:hover, &focus
+    color: $main
+    text-decoration: none
+
+
 .button
   background: $white
   color: $main
@@ -55,9 +63,6 @@ html, body
     text-decoration: none
     background: $orange
     text-decoration: none
-    -webkit-box-shadow: 0 0 57px 0 rgba(4, 6, 9, 0.25)
-    -moz-box-shadow: 0 0 57px 0 rgba(4, 6, 9, 0.25)
-    box-shadow: 0 0 57px 0 rgba(4, 6, 9, 0.25)
 
 // ================ navbar styles ================
 
@@ -108,7 +113,6 @@ html, body
   height: 1.25em
   background: #fff
   box-shadow: 0rem 0.1rem 0.5rem $shadow
-  // font-weight: 700
   color: $main
 
   .container
@@ -145,18 +149,12 @@ html, body
   -webkit-justify-content: center
   text-align: center
 
-
-
-
   .heading_content
     position: absolute
 
     .title, .subtitle
-      // background: white
       margin: 1.5em
       color: $white
-      // color: $main
-
 
     .title
       text-transform: uppercase
@@ -174,7 +172,6 @@ html, body
       color: $whiteish
       margin-bottom: 0.5em
       padding-bottom: 1em
-      // text-align: center
 
 
   .home_button
@@ -193,6 +190,8 @@ html, body
 // ============= ABOUT =========================
 // =============================================
 #about
+  position: relative
+  z-index: 6
   margin: 0 auto
   background: $uber_light_grey
 
@@ -210,7 +209,7 @@ html, body
     font-size: 0.9rem
 
   .about-item-row
-    margin: 6em auto
+    margin: 2em auto
     .about-item-content
       background: #fff
       border: 1px solid $uber_light_grey
@@ -227,47 +226,90 @@ html, body
         color: $main
 
       &:hover, &:focus
-        box-shadow: 0 22px 43px $shadow
-        // animation-name: fadeInUp
-        transform: translateY(-10px)
-        animation-delay: 0.6s
-        animation-duration: 1s
+        box-shadow: 0 0.7em 1em $shadow
+        transform: translateY(-15px)
+        transition: transform 0.4s ease-in-out
+        -webkit-transition: transform 0.4s ease-in-out
+        -moz-transition: transform 0.4s ease-in-out
+        -o-transition: transform 0.4s ease-in-out
         .linea-icon
           color: $orange
-          -webkit-transition: color 0.4s ease-out
-          -moz-transition: color 0.4s ease-out
-          -o-transition: color 0.4s ease-out
-          transition: color 0.4s ease-out
+          -webkit-transition: color 0.5s ease-out
+          -moz-transition: color 0.5s ease-out
+          -o-transition: color 0.5s ease-out
+          transition: color 0.5s ease-out
         .learn-more
           color: $orange
-          -webkit-transition: color 0.4s ease-out
-          -moz-transition: color 0.4s ease-out
-          -o-transition: color 0.4s ease-out
-          transition: color 0.4s ease-out
+          -webkit-transition: color 0.7s ease-in-out
+          -moz-transition: color 0.7s ease-in-out
+          -o-transition: color 0.7s ease-in-out
+          transition: color 0.7s ease-in-out
+
 
       .subtitle
-        // text-align: left
         color: $main
         font-size: 1.2rem
         margin: 2em 0
         display: block
 
       .learn-more
-        font-family: 'linea-arrows-10'
         font-size: 3em
-        padding-top: 2em
+        display: block
+        margin-top: 1em
         text-decoration: none
-        text-align: right
+        text-align: center
         color: $white
+        cursor: pointer
         &:hover
-          transition: transform 2s ease-in-out
-          transform: translateX(30)
+          margin-left: 1.2em
+          transition: margin-left 0.7s ease-out
+          -webkit-transition: margin-left 0.7s ease-out
+          -moz-transition: margin-left 0.7s ease-out
+          -o-transition: margin-left 0.7s ease-out
+
+  .btn-row
+    margin: 4em auto
+    text-align: center
+    // align-items: center
+
+    .button
+      width: 20%
+      position: relative
+      padding: 0.5rem
+      font-weight: 700
+      color: $main
+      background: #fff
+      &:hover, &focus
+        background: $orange
+        color: $main
+        -webkit-transition: all 0.5s ease-in-out
+        -moz-transition: all 0.5s ease-in-out
+        -o-transition: all 0.5s ease-in-out
+        transition: all 0.5s ease-in-out
+
+    .button::before
+      font-family: 'linea-basic-10'
+      content: "."
+      font-size: 2em
+      font-weight: 700
+      color: $main
+      position: absolute
+      width: 2rem
+      display: block
+      left: -40px
+      top: -5px
+    &:hover, &:focus
+      color: $orange
+
+
   #who
     width: 100%
     background: #fff
 
 
 #first_window
+  position: relative
+  z-index: 5
   height: 350px
   background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/headerrr.jpg)
   color: $whiteish
@@ -282,9 +324,13 @@ html, body
     font-size: 1rem
     text-transform: uppercase
     font-weight: lighter
-    // font-family: Montserrat
 
 #services
+  position: relative
+  z-index: 4
+  // background: #fff
+  background-color: $uber_light_grey
+
   .section-heading::after
     content: ''
     height: 1px
@@ -295,19 +341,26 @@ html, body
 
   .options-row
     margin: 4em
-    border-top: 1px solid $shadow
+    // border-top: 1px solid $shadow
     .serv-opt-holder
       height: 8.5em
       display: flex
       align-items: center
       justify-content: center
-      // position:
-      cursor: pointer
-      &:hover
-        background-color: $uber_light_grey
+      background: #fff
 
-      a
-        font-weight: 400
+      // position:
+      &:hover
+        // background-color: $uber_light_grey
+        background: $orange
+
+      .serv-opt
+        cursor: pointer
+        justify-content: center
+        height: 100%
+        width: 100%
+        align-items: center
+        // font-weight: 400
         color: $main
         &:hover
         text-decoration: none
@@ -318,8 +371,7 @@ html, body
       &:hover
         background-color: $orange
 
-      a
-        // color: $orange
+      .serv-opt
         color: #fff
     .active-option:after
       content: ""
@@ -331,29 +383,24 @@ html, body
       left: 15%
       bottom: -7%
 
-
-
-
-
-
-
   .shown-serv-row
     // margin: 5rem 0 5rem 15%
     text-align: left
     color: $text
     font-size: 1.1rem
-    li
 
   #serv-1
-    display: visible
+    display: none
   #serv-2
-    display: visible
+    display: none
   #serv-3
-    visibility: visible
+    display: none
 
 
 
 #references
+  position: relative
+  z-index: 3
   background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ),url(../images/header.jpg)
 
 
@@ -365,7 +412,13 @@ html, body
 
 
 #contact
+  background: #fff
+
+  position: relative
+  z-index: 2
   width: 100%
+  // margin-bottom: 400px
+
   .section-heading::after
     content: ''
     height: 1px
@@ -390,7 +443,7 @@ html, body
       margin-top: 5em
     input
       margin: 2em auto
-      border-radius: 0
+      // border-radius: 0
       height: 3.25em
       background: #fbfbfb
       &:hover, &:focus
@@ -415,13 +468,9 @@ html, body
         -webkit-box-shadow: none
         -moz-box-shadow: none
         border: 1px solid $orange
-        // box-shadow: 0 0.5rem 0.5em rgba(0,0,0,.15)
-        // transform: translateY(-2px)
-        // animation-duration: 1s
 
     .btn
       background: #fff
-      // margin-bottom: 5rem
       border: 1px solid $orange
       width: 100%
       color: $main
@@ -429,7 +478,6 @@ html, body
       font-weight: 700
       &:hover, &:focus
         box-shadow: 0 0.5rem 0.5em rgba(0,0,0,.15)
-        transform: translateY(-2px)
         background: $orange
         -webkit-transition: background 0.5s ease-out
         -moz-transition: background 0.5s ease-out
@@ -441,10 +489,22 @@ html, body
   padding: 0
   margin: 3em 0 0 0
   height: 400px
+  position: relative
+  z-index: 8
+  margin-bottom: 200px
+  .overlay
+    background: transparent
+    position: relative
+    width: 100%
+    height: 100%
+    top: 400
+    margin-top: -400px
+
   #map
     width: 100%
     height: 100%
     padding: 0
+    pointer-events: none
 
 .large-window
   margin: 0
@@ -461,14 +521,15 @@ html, body
     attachment: fixed
 
 
-// TODO: parallax
 footer
   background: $main
-  // padding: 0
-  // margin-top: 2e
+  height: 200px
   font-size: 2.35rem
   text-align: center
-  align-items: center
+  position: fixed
+  z-index: 1
+  bottom: 0
+  width: 100%
 
   .fa
     color: $white
@@ -489,15 +550,3 @@ footer
     margin: 0
     color: $uber_light_grey
     font-size: 0.25em
-
-
-// ======== ANIMATIONS =================
-@keyframes fadeInUp
-  0%
-    opacity: 0
-    transform: translate3d(0, 100%, 0)
-  100%
-    opacity: 1
-    transform: none
-@keyframes arrowRun
-  0%
