@@ -24,6 +24,24 @@ $('a[href*="#"]:not([href="#"])').click(function() {
 });
 
 
+// COUNTER
+// TODO: only when seeen
+$('.count').each(function () {
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 3000,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+});
+
+
+// TODO:add more when hover
+
+
 // $(".page").each(function() {
 //     var bb = $(this).attr("id");
 //     var hei = $(this).outerHeight();

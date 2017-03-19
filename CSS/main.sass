@@ -1,8 +1,8 @@
 $main: rgba(#000000, 0.87)
-$text: rgba(#000000, 0.60)
+$text: rgba(#000000, 0.57)
 $shadow: rgba(#000000, 0.35)
 $white:#ffffff
-$whiteish: rgba(#fff, 0.75 )
+$whiteish: rgba(#fff, 0.90)
 $uber_light_grey: #f8f8f8
 $orange: #f74300
 $nav-title: #b1b1b1
@@ -20,30 +20,32 @@ html, body
   max-width: 1440px
   text-align: center
 
-.title, .sub-heading
+.title, .subtitle
+  font-family: 'Roboto Mono'
   color: $main
   text-decoration: none
   text-transform: uppercase
 
-p
+.text
   color: $text
+  font-size: 1rem
 
 .section-heading
+  font-family: 'Roboto'
   font-size: 1.5rem
   text-transform: uppercase
-  font-weight: 700
-  margin: 3em 0
+  // font-weight: 700
+  margin: 6em 0 2em 0
 
-.sub-heading
+.subtitle
   font-size: 1.2rem
-  // color: $text
 
 .button
   background: $white
   color: $main
   padding: 0.5em 3.2em
-  font-weight: 700
   text-decoration: none
+  text-transform: uppercase
   border: none
   outline: none
   border-radius: 0
@@ -86,12 +88,17 @@ p
       padding: 0
       align-self: center
       a
-        font-size: 1.2rem
+        font-size: 14px
         text-transform: uppercase
-        color: $nav-title
+        font-family: 'Roboto'
+        font-weight: 500
+        color: $whiteish
         &:hover, &:focus
           color: $orange
-
+          -webkit-transition: color 0.5s ease-out
+          -moz-transition: color 0.5s ease-out
+          -o-transition: color 0.5s ease-out
+          transition: color 0.5s ease-out
 
 
 
@@ -101,7 +108,7 @@ p
   height: 1.25em
   background: #fff
   box-shadow: 0rem 0.1rem 0.5rem $shadow
-  font-weight: 700
+  // font-weight: 700
   color: $main
 
   .container
@@ -110,9 +117,9 @@ p
   #navbar-links
     li
       a
+        font-weight: 700
         color: $main
-    &:hover, &:focus
-      color: #f74300
+
 
   #navbar-logo
     color: $main
@@ -121,39 +128,47 @@ p
 
 // ================ Home styles ================
 #home
-  background: linear-gradient( rgba(#000, 0.1), rgba(#000, 0.1) ), url("../images/first.jpg")
+  background: linear-gradient(rgba(#000, 0.3), rgba(#000, 0.3) ), url("../images/first.jpg")
   background-repeat: no-repeat
-  background-position: center
+  background-position: center top
   background-size: cover
   background-attachment: fixed
   padding: 0
   margin: 0
-  height: 100vh
-  // width: 100vh
+  height: 70vh
   display: flex
-  flex-direction: column
+  display: -webkit-webkit-flex
+  display: -moz-webkit-flex
   align-items: center
+  -webkit-align-items: center
   justify-content: center
+  -webkit-justify-content: center
   text-align: center
+
+
+
 
   .heading_content
     position: absolute
 
-    .title, .sub-heading
+    .title, .subtitle
+      // background: white
       margin: 1.5em
       color: $white
+      // color: $main
 
 
     .title
       text-transform: uppercase
-      font-weight: 700
-      font-size: 6rem
+      font-weight: 200
+      font-family: 'Noto Sans'
+      font-size: 6.5rem
       padding: 0.3em
       margin: 0.3em
-      border: solid 0.3rem $white
+      border-bottom: solid 0.3rem $white
       border-spacing: 0.3em
 
-    .sub-heading
+    .subtitle
       font-weight: 300
       text-transform: uppercase
       color: $whiteish
@@ -162,22 +177,21 @@ p
       // text-align: center
 
 
-    .home_button
-      margin-top: 5rem
-
-  #down_chevron
-    color: $whiteish
-    position: absolute
-    bottom: 5%
+  .home_button
+    // bottom: 15%
+    margin-top: 30rem
+    background: $white
+    color: $main
+    border: 2px solid $white
     &:hover, &:focus
-      font-size: 1.3em
-      color: $orange
-      #down_chevron::before
-        content: "Viac"
-        color: $whiteish
+      // color: $orange
 
 
 
+
+// =============================================
+// ============= ABOUT =========================
+// =============================================
 #about
   margin: 0 auto
   background: $uber_light_grey
@@ -190,47 +204,87 @@ p
     margin: 0.5em auto
     background: $orange
 
+  .subtitle
+    color: $text
+    font-weight: 100
+    font-size: 0.9rem
+
   .about-item-row
     margin: 6em auto
-    display: flex
-    display: -webkit-flex
-    flex-flow: row wrap
-    // align-content: space-around
-    justify-content: space-between
-    -webkit-justify-content: space-between
-    .about-item
+    .about-item-content
       background: #fff
       border: 1px solid $uber_light_grey
       box-shadow: 0 0.1em 0.1em $shadow
-      // display: flex
-      // justify-content: center
-      width: 27%
-      margin: 0 2em
-      &:hover
-        transform: translate3d(0, -10px, 0)
-        box-shadow: 0 22px 43px $shadow
-      // width: 33%
-      .about-item-content
-        padding: 5em 4em
-        .sub-title
-          color: $main
-          padding-bottom: 1em
-        a
-          padding-top: 2em
-          margin-top: 2em
-          text-decoration: none
-          color: $orange
+      padding: 3em 3.5em
+      width: 100%
+      height: 100%
+      text-align: left
+      .linea-icon
+        font-family: 'linea-basic-10'
+        font-size: 4rem
+        font-style: normal
+        font-weight: normal
+        color: $main
 
-  .btn-row
-    margin: 3em
-    .button
-      border: 1px solid $orange
+      &:hover, &:focus
+        box-shadow: 0 22px 43px $shadow
+        // animation-name: fadeInUp
+        transform: translateY(-10px)
+        animation-delay: 0.6s
+        animation-duration: 1s
+        .linea-icon
+          color: $orange
+          -webkit-transition: color 0.4s ease-out
+          -moz-transition: color 0.4s ease-out
+          -o-transition: color 0.4s ease-out
+          transition: color 0.4s ease-out
+        .learn-more
+          color: $orange
+          -webkit-transition: color 0.4s ease-out
+          -moz-transition: color 0.4s ease-out
+          -o-transition: color 0.4s ease-out
+          transition: color 0.4s ease-out
+
+      .subtitle
+        // text-align: left
+        color: $main
+        font-size: 1.2rem
+        margin: 2em 0
+        display: block
+
+      .learn-more
+        font-family: 'linea-arrows-10'
+        font-size: 3em
+        padding-top: 2em
+        text-decoration: none
+        text-align: right
+        color: $white
+        &:hover
+          transition: transform 2s ease-in-out
+          transform: translateX(30)
+  #who
+    width: 100%
+    background: #fff
+
+
 #first_window
-  height: 200px
-  background-image: url(../images/headerrr.jpg)
+  height: 350px
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/headerrr.jpg)
+  color: $whiteish
+  i
+    font-size: 4rem
+    color: $whiteish
+
+  .count
+    font-size: 5rem
+    font-weight: 700
+  .window-text
+    font-size: 1rem
+    text-transform: uppercase
+    font-weight: lighter
+    // font-family: Montserrat
 
 #services
-  background: $uber_light_grey
   .section-heading::after
     content: ''
     height: 1px
@@ -238,6 +292,66 @@ p
     display: block
     margin: 0.5em auto
     background: $orange
+
+  .options-row
+    margin: 4em
+    border-top: 1px solid $shadow
+    .serv-opt-holder
+      height: 8.5em
+      display: flex
+      align-items: center
+      justify-content: center
+      // position:
+      cursor: pointer
+      &:hover
+        background-color: $uber_light_grey
+
+      a
+        font-weight: 400
+        color: $main
+        &:hover
+        text-decoration: none
+
+
+    .active-option
+      background-color: $orange
+      &:hover
+        background-color: $orange
+
+      a
+        // color: $orange
+        color: #fff
+    .active-option:after
+      content: ""
+      width: 1.5em
+      height: 1.5em
+      background-color: $orange
+      transform: rotate(45deg)
+      position: absolute
+      left: 15%
+      bottom: -7%
+
+
+
+
+
+
+
+  .shown-serv-row
+    // margin: 5rem 0 5rem 15%
+    text-align: left
+    color: $text
+    font-size: 1.1rem
+    li
+
+  #serv-1
+    display: visible
+  #serv-2
+    display: visible
+  #serv-3
+    visibility: visible
+
+
 
 #references
   background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ),url(../images/header.jpg)
@@ -317,6 +431,10 @@ p
         box-shadow: 0 0.5rem 0.5em rgba(0,0,0,.15)
         transform: translateY(-2px)
         background: $orange
+        -webkit-transition: background 0.5s ease-out
+        -moz-transition: background 0.5s ease-out
+        -o-transition: background 0.5s ease-out
+        transition: background 0.5s ease-out
         color: #fff
 
 .map-row
@@ -343,6 +461,7 @@ p
     attachment: fixed
 
 
+// TODO: parallax
 footer
   background: $main
   // padding: 0
@@ -370,3 +489,15 @@ footer
     margin: 0
     color: $uber_light_grey
     font-size: 0.25em
+
+
+// ======== ANIMATIONS =================
+@keyframes fadeInUp
+  0%
+    opacity: 0
+    transform: translate3d(0, 100%, 0)
+  100%
+    opacity: 1
+    transform: none
+@keyframes arrowRun
+  0%

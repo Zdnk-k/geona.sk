@@ -12,7 +12,9 @@
     <!-- styles.css link -->
    <link rel="stylesheet" href="./CSS/main.css">
     <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto|Roboto+Mono" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto|Montserrat|Roboto+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="./CSS/linea-arrows.css">
+  <link rel="stylesheet" href="./CSS/linea-styles.css">
 
 
     <!-- font awesome  -->
@@ -51,74 +53,161 @@
           <!-- titles -->
           <div id="Title" class="titles">
             <h1 class="title">Geona</h1>
-            <h3 class="sub-heading">Ta zamerame....</h4>
+            <h3 class="subtitle">Ta zamerame....</h4>
           </div>
 
           <!-- learn more button -->
-          <a href="#about" class="home_button button">O nás</a>
+          <!-- <a href="#about" class="home_button button">O nás</a> -->
         </div>
 
         <!-- move down chevron  -->
-        <a href="#about" aria-label="Scroll Down" id="down_chevron">
+        <a href="#about" class="home_button button">Viac</a>
+
+        <!-- <a href="#about" aria-label="Scroll Down" id="down_chevron">
           <i class="fa fa-chevron-down fa-2x" aria-hidden="true"></i>
-        </a>
+        </a> -->
       </section>
     </header>
 
     <section id="about">
       <div class="container">
-        <h1 class="section-heading">o nás</h1>
-        <p class="text">
-          Vitajte na našej webstránke. </br>
-          Ak hľadáta poskytovateľa geodetických služieb, ste na správnej adrese, radi Vám pomôžeme.
-      </p>
+        <div class="row">
+          <h1 class="section-heading">o nás</h1>
+          <p class="subtitle">
+            Vitajte na našej stránke. </br>
+            Ak hľadáte poskytovateľa geodetických služieb, ste na správnej adrese, radi Vám pomôžeme.
+          </p>
+        </div>
 
-      <div class="row about-item-row">
-        <div class="col-lg-4 col-md-6 col-xs-12 about-item">
-          <div class="about-item-content">
-            <h2 class="sub-heading">Geodetické práce</h2>
-            <p>práce v katastri nehnuteľností, práce v investičnej výstavbe...</p>
-            <a href="#services" class="learn_more">Viac -></a>
+        <div class="row about-item-row row-grid">
+          <div class="col-lg-4 col-md-6 col-xs-12 about-item">
+            <div class="about-item-content">
+              <i class="linea-icon icon-basic-geolocalize-05"></i>
+              <h2 class="subtitle">Geodetické práce</br></h2>
+              <p class="text">Ponúkame práce v katastri nehnuteľností, práce v investičnej výstavbe...</p>
+              <a href="#services" class="learn-more">
+                <i class="fa fa-long-arrow-right"></i>
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="col-lg-4 col-md-6 about-item">
-          <div class="about-item-content">
-            <h2 class="sub-heading">Poradenstvo a služby</h2>
-            <p>Vysporiadaní vlastníctva k pozemkom a zápise do katastra nehnuteľností...</p>
-            <a href="#services" class="learn_more">Viac -></a>
+          <div class="col-lg-4 col-md-6 about-item">
+            <div class="about-item-content">
+              <i class="linea-icon icon-basic-lightbulb"></i>
+              <h2 class="subtitle">Poradenstvo a služby</h2>
+              <p class="text">pri vysporiadaní vlastníctva a zápise do katastra nehnutelnosti...</p>
+              <a href="#services" class="learn-more">
+                <i class="fa fa-long-arrow-right"></i>
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="col-lg-4 col-md-6 about-item">
-          <div class="about-item-content">
-            <h2 class="sub-heading">Riešenia na mieru</h2>
-            <p>Radi pre Vás vytvoríme riešenie presne na mieru Vašim potrebám...</p>
-            <a href="#services" class="learn_more">Viac -></a>
+          <div class="col-lg-4 col-md-6 about-item">
+            <div class="about-item-content">
+              <i class="linea-icon icon-basic-pencil-ruler-pen"></i>
+              <h2 class="subtitle">Riešenia na mieru</h2>
+              <p class="text">Radi pre Vás vytvoríme riešenie presne na mieru Vašim potrebám...</p>
+              <a href="#services" class="learn-more">
+                <i class="fa fa-long-arrow-right"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="row btn-row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <a href="#contact" class="button contact-us-button">Kontaktuje nás</a>
+        <div id="who" class="row">
+          <div class="container">
+          <div class="row">
+            <h1 class="section-heading">Kto sme</h1>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h2 class="subtitle">Ing. Richard Nagy</h2>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h2 class="subtitle">Ing. Viera Nagyová</h2>
+          </div>
         </div>
       </div>
-    </div>
     </section>
 
     <div id='first_window' class="large-window">
-
+      <div class="container">
+        <i class="icon-basic-map"></i>
+        <h1 class="count">80</h1>
+        <p class="window-text">Geometrických plánov  rôzneho účelu ročne od roku <b>1997</b></p>
+      </div>
     </div>
 
     <section id="services">
       <div class="container">
-        <h1 class="section-heading">Services</h1>
+        <h1 class="section-heading">Naše služby</h1>
+        <div class="row options-row">
+          <div class="serv-opt-holder col-lg-4 col-md-4 col-sm-4 col-xs-12 active-option">
+            <a id="serv-opt-1" href="#services"class="subtitle">
+              Geodetické práce v </br>katastri nehnuteľností
+            </a>
+          </div>
+          <div class="serv-opt-holder col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <a id="serv-opt-2" href="#services"class="subtitle">
+              Geodetické práce v </br>investičnej výstavbe
+            </a>
+          </div>
+          <div class="serv-opt-holder col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <a id="serv-opt-3" href="#services"class="subtitle">
+              Poradenstvo a služby pri vysporiadaní vlastníctva a zápise do katastra
+            </a>
+          </div>
+        </div>
+        <div id="serv-1"class="col-lg-12 col-md-12 col-sm-12 col-xs-12 shown-serv-row active">
+          <ol>
+            <li>
+              Geometrické plány:
+              <ul>
+                <li>Na majetkoprávne usporiadanie pozemkov</li>
+                <li>Na rozdelenie spoluvlastníctva</li>
+                <li>Na rozdelenie pozemkov</li>
+                <li>Na oddelenie stavebnej parcely</li>
+                <li>Na vyňatie z poľnohospodárskeho alebo lesného fondu</li>
+                <li>Na porealizačné zameranie rozostavanej stavby k čerpaniu úveru z banky</li>
+                <li>Na porealizačné zameranie novostavby ku kolaudácii</li>
+                <li>Na zriadenie vecného bremena</li>
+            </ul>
+          </li>
+            <li>Vytyčovanie hraníc pozemkov</li>
+            <li>Registre obnovenej evidencie pozemkov-ROEP</li>
+            <li>Projekty pozemkových úprav-PPÚ</li>
+          </ol>
+        </div>
+
+        <div id="serv-2" class="shown-serv-row row">
+          <ul>
+            <li>Účelové mapovanie polohopisu a výškopisu územia k projektovej príprave stavieb</li>
+            <li>Vytýčenie, zameranie a zákres podzemných inžinierskych sietí</li>
+            <li>Vytyčovacie práce pre začatím a počas stavebých prác</li>
+            <li>Porealizačné zameranie skutočného vyhotovenia stavby</li>
+            <li>Porealizačné zameranie podzemných vedení za účelom zriadenia vecného bremena</li>
+            <li>Geometrické plány na zápis stavieb do katastra nehnuteľností</li>
+            <li>Výkupové elaboráty na výkup pozemkov pod stavbami</li>
+            <li>Kontrolné merania stavieb počas prevádzky – horizontálne a vertikálne pohyby</li>
+            <li>Meranie deformácii žeriavových dráh a žeriavových mostov</li>
+          </ul>
+        </div>
+
+        <div id="serv-3" class="shown-serv-row row">
+          <ul>
+            <li>Zabezpečenie dokladov k vyňatiu pozemkov z poľnohospodárskeho alebo lesného fondu</li>
+            <li>Zabezpečenie potrebných dokladov ku geom.plánu pre notársky úrad</li>
+            <li>Identifikácia parcely v teréne – predbežné približné vytýčenie</li>
+            <li>Prešetrenie vlastníctva k pozemkom podľa pôvodnych zápisov v pozemkovej knihe</li>
+            <li>Zabezpečenie výpisov z LV alebo PKV</li>
+            <li>Poradenstvo pri postupe nadobudnutia vlastníctva do A do Z</li>
+          </ul>
+        </div>
 
       </div>
     </section>
 
     <section id="references" class="large-window">
       <div class="container">
-        <h1 class="section-heading">References</h1>
+        <h1 class="section-heading">Referencie</h1>
 
       </div>
     </section>
@@ -135,27 +224,27 @@
         <h1 class="section-heading">Kontaktujte nás</h1>
         <!--GEONA  name, mail, phone -->
         <div class="contact-info row">
-          <div class="contact-info-item col-lg-4 col-md-12 col-sm-4 col-xs-12">
+          <div class="contact-info-item col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <i class="fa fa-phone"></i>
             <div class="text-content">
-              <h3 class="sub-heading">Telefon</h3>
+              <h3 class="subtitle">Telefon</h3>
               <p>+421 666 666 666</p>
               <p>+421 1332 333 333</p>
             </div>
           </div>
-          <div class="contact-info-item col-lg-4 col-md-12 col-sm-4 col-xs-12 middle-item">
+          <div class="contact-info-item col-lg-4 col-md-4 col-sm-4 col-xs-12 middle-item">
               <i class="fa fa-envelope"></i>
               <div class="text-content">
-                <h3 class="sub-heading">Email</h3>
+                <h3 class="subtitle">Email</h3>
                 <p>anickin.foter@geona.sk</p>
                 <p>anickina.manka@geona.sk</p>
 
               </div>
           </div>
-          <div class="contact-info-item col-lg-4 col-md-12 col-sm-4 col-xs-12">
+          <div class="contact-info-item col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <i class="fa fa-home"></i>
               <div class="text-content">
-                <h3 class="sub-heading">Adresa</h3>
+                <h3 class="subtitle">Adresa</h3>
                 <p>
                   Partizanska 1057
                 </br>

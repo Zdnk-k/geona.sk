@@ -10,29 +10,31 @@ html, body {
   max-width: 1440px;
   text-align: center; }
 
-.title, .sub-heading {
+.title, .subtitle {
+  font-family: "Roboto Mono";
   color: rgba(0, 0, 0, 0.87);
   text-decoration: none;
   text-transform: uppercase; }
 
-p {
-  color: rgba(0, 0, 0, 0.6); }
+.text {
+  color: rgba(0, 0, 0, 0.57);
+  font-size: 1rem; }
 
 .section-heading {
+  font-family: "Roboto";
   font-size: 1.5rem;
   text-transform: uppercase;
-  font-weight: 700;
-  margin: 3em 0; }
+  margin: 6em 0 2em 0; }
 
-.sub-heading {
+.subtitle {
   font-size: 1.2rem; }
 
 .button {
   background: #ffffff;
   color: rgba(0, 0, 0, 0.87);
   padding: 0.5em 3.2em;
-  font-weight: 700;
   text-decoration: none;
+  text-transform: uppercase;
   border: none;
   outline: none;
   border-radius: 0;
@@ -69,75 +71,76 @@ p {
       padding: 0;
       align-self: center; }
       .nav #navbar-links li a, .navbar #navbar-links li a {
-        font-size: 1.2rem;
+        font-size: 14px;
         text-transform: uppercase;
-        color: #b1b1b1; }
+        font-family: "Roboto";
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.9); }
         .nav #navbar-links li a:hover, .nav #navbar-links li a:focus, .navbar #navbar-links li a:hover, .navbar #navbar-links li a:focus {
-          color: #f74300; }
+          color: #f74300;
+          -webkit-transition: color 0.5s ease-out;
+          -moz-transition: color 0.5s ease-out;
+          -o-transition: color 0.5s ease-out;
+          transition: color 0.5s ease-out; }
 
 .nav-fixed {
   height: 1.25em;
   background: #fff;
   box-shadow: 0rem 0.1rem 0.5rem rgba(0, 0, 0, 0.35);
-  font-weight: 700;
   color: rgba(0, 0, 0, 0.87); }
   .nav-fixed .container {
     padding: 0;
     align-self: center; }
   .nav-fixed #navbar-links li a {
+    font-weight: 700;
     color: rgba(0, 0, 0, 0.87); }
-  .nav-fixed #navbar-links:hover, .nav-fixed #navbar-links:focus {
-    color: #f74300; }
   .nav-fixed #navbar-logo {
     color: rgba(0, 0, 0, 0.87); }
     .nav-fixed #navbar-logo:hover, .nav-fixed #navbar-logo:focus {
       color: #f74300; }
 
 #home {
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/first.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/first.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center top;
   background-size: cover;
   background-attachment: fixed;
   padding: 0;
   margin: 0;
-  height: 100vh;
+  height: 70vh;
   display: flex;
-  flex-direction: column;
+  display: -webkit-webkit-flex;
+  display: -moz-webkit-flex;
   align-items: center;
+  -webkit-align-items: center;
   justify-content: center;
+  -webkit-justify-content: center;
   text-align: center; }
   #home .heading_content {
     position: absolute; }
-    #home .heading_content .title, #home .heading_content .sub-heading {
+    #home .heading_content .title, #home .heading_content .subtitle {
       margin: 1.5em;
       color: #ffffff; }
     #home .heading_content .title {
       text-transform: uppercase;
-      font-weight: 700;
-      font-size: 6rem;
+      font-weight: 200;
+      font-family: "Noto Sans";
+      font-size: 6.5rem;
       padding: 0.3em;
       margin: 0.3em;
-      border: solid 0.3rem #ffffff;
+      border-bottom: solid 0.3rem #ffffff;
       border-spacing: 0.3em; }
-    #home .heading_content .sub-heading {
+    #home .heading_content .subtitle {
       font-weight: 300;
       text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.75);
+      color: rgba(255, 255, 255, 0.9);
       margin-bottom: 0.5em;
       padding-bottom: 1em; }
-    #home .heading_content .home_button {
-      margin-top: 5rem; }
-  #home #down_chevron {
-    color: rgba(255, 255, 255, 0.75);
-    position: absolute;
-    bottom: 5%; }
-    #home #down_chevron:hover, #home #down_chevron:focus {
-      font-size: 1.3em;
-      color: #f74300; }
-      #home #down_chevron:hover #down_chevron::before, #home #down_chevron:focus #down_chevron::before {
-        content: "Viac";
-        color: rgba(255, 255, 255, 0.75); }
+  #home .home_button {
+    margin-top: 30rem;
+    background: #ffffff;
+    color: rgba(0, 0, 0, 0.87);
+    border: 2px solid #ffffff; }
 
 #about {
   margin: 0 auto;
@@ -149,50 +152,124 @@ p {
     display: block;
     margin: 0.5em auto;
     background: #f74300; }
+  #about .subtitle {
+    color: rgba(0, 0, 0, 0.57);
+    font-weight: 100;
+    font-size: 0.9rem; }
   #about .about-item-row {
-    margin: 6em auto;
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    -webkit-justify-content: space-between; }
-    #about .about-item-row .about-item {
+    margin: 6em auto; }
+    #about .about-item-row .about-item-content {
       background: #fff;
       border: 1px solid #f8f8f8;
       box-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.35);
-      width: 27%;
-      margin: 0 2em; }
-      #about .about-item-row .about-item:hover {
-        transform: translate3d(0, -10px, 0);
-        box-shadow: 0 22px 43px rgba(0, 0, 0, 0.35); }
-      #about .about-item-row .about-item .about-item-content {
-        padding: 5em 4em; }
-        #about .about-item-row .about-item .about-item-content .sub-title {
-          color: rgba(0, 0, 0, 0.87);
-          padding-bottom: 1em; }
-        #about .about-item-row .about-item .about-item-content a {
-          padding-top: 2em;
-          margin-top: 2em;
-          text-decoration: none;
-          color: #f74300; }
-  #about .btn-row {
-    margin: 3em; }
-    #about .btn-row .button {
-      border: 1px solid #f74300; }
+      padding: 3em 3.5em;
+      width: 100%;
+      height: 100%;
+      text-align: left; }
+      #about .about-item-row .about-item-content .linea-icon {
+        font-family: "linea-basic-10";
+        font-size: 4rem;
+        font-style: normal;
+        font-weight: normal;
+        color: rgba(0, 0, 0, 0.87); }
+      #about .about-item-row .about-item-content:hover, #about .about-item-row .about-item-content:focus {
+        box-shadow: 0 22px 43px rgba(0, 0, 0, 0.35);
+        transform: translateY(-10px);
+        animation-delay: 0.6s;
+        animation-duration: 1s; }
+        #about .about-item-row .about-item-content:hover .linea-icon, #about .about-item-row .about-item-content:focus .linea-icon {
+          color: #f74300;
+          -webkit-transition: color 0.4s ease-out;
+          -moz-transition: color 0.4s ease-out;
+          -o-transition: color 0.4s ease-out;
+          transition: color 0.4s ease-out; }
+        #about .about-item-row .about-item-content:hover .learn-more, #about .about-item-row .about-item-content:focus .learn-more {
+          color: #f74300;
+          -webkit-transition: color 0.4s ease-out;
+          -moz-transition: color 0.4s ease-out;
+          -o-transition: color 0.4s ease-out;
+          transition: color 0.4s ease-out; }
+      #about .about-item-row .about-item-content .subtitle {
+        color: rgba(0, 0, 0, 0.87);
+        font-size: 1.2rem;
+        margin: 2em 0;
+        display: block; }
+      #about .about-item-row .about-item-content .learn-more {
+        font-family: "linea-arrows-10";
+        font-size: 3em;
+        padding-top: 2em;
+        text-decoration: none;
+        text-align: right;
+        color: #ffffff; }
+        #about .about-item-row .about-item-content .learn-more:hover {
+          transition: transform 2s ease-in-out;
+          transform: translateX(30); }
+  #about #who {
+    width: 100%;
+    background: #fff; }
 
 #first_window {
-  height: 200px;
-  background-image: url(../images/headerrr.jpg); }
+  height: 350px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/headerrr.jpg);
+  color: rgba(255, 255, 255, 0.9); }
+  #first_window i {
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.9); }
+  #first_window .count {
+    font-size: 5rem;
+    font-weight: 700; }
+  #first_window .window-text {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: lighter; }
 
-#services {
-  background: #f8f8f8; }
-  #services .section-heading::after {
+#services .section-heading::after {
+  content: "";
+  height: 1px;
+  max-width: 2em;
+  display: block;
+  margin: 0.5em auto;
+  background: #f74300; }
+#services .options-row {
+  margin: 4em;
+  border-top: 1px solid rgba(0, 0, 0, 0.35); }
+  #services .options-row .serv-opt-holder {
+    height: 8.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; }
+    #services .options-row .serv-opt-holder:hover {
+      background-color: #f8f8f8; }
+    #services .options-row .serv-opt-holder a {
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.87);
+      text-decoration: none; }
+  #services .options-row .active-option {
+    background-color: #f74300; }
+    #services .options-row .active-option:hover {
+      background-color: #f74300; }
+    #services .options-row .active-option a {
+      color: #fff; }
+  #services .options-row .active-option:after {
     content: "";
-    height: 1px;
-    max-width: 2em;
-    display: block;
-    margin: 0.5em auto;
-    background: #f74300; }
+    width: 1.5em;
+    height: 1.5em;
+    background-color: #f74300;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 15%;
+    bottom: -7%; }
+#services .shown-serv-row {
+  text-align: left;
+  color: rgba(0, 0, 0, 0.57);
+  font-size: 1.1rem; }
+#services #serv-1 {
+  display: visible; }
+#services #serv-2 {
+  display: visible; }
+#services #serv-3 {
+  visibility: visible; }
 
 #references {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../images/header.jpg); }
@@ -260,6 +337,10 @@ p {
         box-shadow: 0 0.5rem 0.5em rgba(0, 0, 0, 0.15);
         transform: translateY(-2px);
         background: #f74300;
+        -webkit-transition: background 0.5s ease-out;
+        -moz-transition: background 0.5s ease-out;
+        -o-transition: background 0.5s ease-out;
+        transition: background 0.5s ease-out;
         color: #fff; }
 
 .map-row {
@@ -306,5 +387,15 @@ footer {
     margin: 0;
     color: #f8f8f8;
     font-size: 0.25em; }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0); }
+  100% {
+    opacity: 1;
+    transform: none; } }
+@keyframes arrowRun {
+  0%; }
 
 /*# sourceMappingURL=main.css.map */
