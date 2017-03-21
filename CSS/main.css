@@ -119,7 +119,9 @@ a {
   -webkit-align-items: center;
   justify-content: center;
   -webkit-justify-content: center;
-  text-align: center; }
+  text-align: center;
+  z-index: 10;
+  position: relative; }
   #home .heading_content {
     position: absolute; }
     #home .heading_content .title, #home .heading_content .subtitle {
@@ -150,7 +152,8 @@ a {
   position: relative;
   z-index: 6;
   margin: 0 auto;
-  background: #f8f8f8; }
+  background: linear-gradient(rgba(248, 248, 248, 0.9), rgba(248, 248, 248, 0.9)), url("../images/map_big1.jpg");
+  background-attachment: fixed; }
   #about .section-heading::after {
     content: "";
     height: 1px;
@@ -171,7 +174,12 @@ a {
       padding: 3em 3.5em;
       width: 100%;
       height: 100%;
-      text-align: left; }
+      text-align: left;
+      transform: translateY(0);
+      transition: all 0.3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out; }
       #about .about-item-row .about-item-content .linea-icon {
         font-family: "linea-basic-10";
         font-size: 4rem;
@@ -181,41 +189,47 @@ a {
       #about .about-item-row .about-item-content:hover, #about .about-item-row .about-item-content:focus {
         box-shadow: 0 0.7em 1em rgba(0, 0, 0, 0.35);
         transform: translateY(-15px);
-        transition: transform 0.4s ease-in-out;
-        -webkit-transition: transform 0.4s ease-in-out;
-        -moz-transition: transform 0.4s ease-in-out;
-        -o-transition: transform 0.4s ease-in-out; }
+        transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out; }
         #about .about-item-row .about-item-content:hover .linea-icon, #about .about-item-row .about-item-content:focus .linea-icon {
           color: #f74300;
           -webkit-transition: color 0.5s ease-out;
           -moz-transition: color 0.5s ease-out;
           -o-transition: color 0.5s ease-out;
           transition: color 0.5s ease-out; }
-        #about .about-item-row .about-item-content:hover .learn-more, #about .about-item-row .about-item-content:focus .learn-more {
-          color: #f74300;
-          -webkit-transition: color 0.7s ease-in-out;
-          -moz-transition: color 0.7s ease-in-out;
-          -o-transition: color 0.7s ease-in-out;
-          transition: color 0.7s ease-in-out; }
+        #about .about-item-row .about-item-content:hover .learn-more img, #about .about-item-row .about-item-content:focus .learn-more img {
+          opacity: 1;
+          -webkit-transition: opacity 0.7s ease-in-out;
+          -moz-transition: opacity 0.7s ease-in-out;
+          -o-transition: opacity 0.7s ease-in-out;
+          transition: opacity 0.7s ease-in-out; }
       #about .about-item-row .about-item-content .subtitle {
         color: rgba(0, 0, 0, 0.87);
         font-size: 1.2rem;
         margin: 2em 0;
         display: block; }
       #about .about-item-row .about-item-content .learn-more {
-        font-size: 3em;
+        font-size: 2em;
         display: block;
         margin-top: 1em;
         text-decoration: none;
         text-align: center;
         color: #ffffff;
-        cursor: pointer; }
+        cursor: pointer;
+        transition: margin-left 0.5s ease-out;
+        -webkit-transition: margin-left 0.5s ease-out;
+        -moz-transition: margin-left 0.5s ease-out;
+        -o-transition: margin-left 0.5s ease-out; }
+        #about .about-item-row .about-item-content .learn-more img {
+          opacity: 0; }
         #about .about-item-row .about-item-content .learn-more:hover {
-          margin-left: 1.2em;
-          transition: margin-left 0.7s ease-out;
-          -webkit-transition: margin-left 0.7s ease-out;
-          -moz-transition: margin-left 0.7s ease-out;
-          -o-transition: margin-left 0.7s ease-out; }
+          margin-left: 1.5em;
+          transition: margin-left 0.5s ease-out;
+          -webkit-transition: margin-left 0.5s ease-out;
+          -moz-transition: margin-left 0.5s ease-out;
+          -o-transition: margin-left 0.5s ease-out; }
   #about .btn-row {
     margin: 4em auto;
     text-align: center; }
@@ -270,7 +284,10 @@ a {
 #services {
   position: relative;
   z-index: 4;
-  background-color: #f8f8f8; }
+  background-image: linear-gradient(rgba(248, 248, 248, 0.9), rgba(248, 248, 248, 0.9)), url("../images/map_big1.jpg");
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: fixed; }
   #services .section-heading::after {
     content: "";
     height: 1px;
@@ -279,30 +296,37 @@ a {
     margin: 0.5em auto;
     background: #f74300; }
   #services .options-row {
-    margin: 4em; }
-    #services .options-row .serv-opt-holder {
-      height: 8.5em;
+    padding: 5em; }
+    #services .options-row .serv-opt-holder .serv-opt {
+      padding: 2em;
+      height: 100%;
+      width: 6em;
+      background: #fff;
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      position: relative;
+      cursor: pointer;
       justify-content: center;
-      background: #fff; }
-      #services .options-row .serv-opt-holder:hover {
-        background: #f74300; }
-      #services .options-row .serv-opt-holder .serv-opt {
-        cursor: pointer;
-        justify-content: center;
-        height: 100%;
-        width: 100%;
-        align-items: center;
-        color: rgba(0, 0, 0, 0.87);
-        text-decoration: none; }
-    #services .options-row .active-option {
+      align-items: flex-start;
+      text-align: left;
+      height: 100%;
+      width: 100%;
+      color: rgba(0, 0, 0, 0.87); }
+      #services .options-row .serv-opt-holder .serv-opt:hover {
+        background: #f74300;
+        transition: background 0.4s ease-out; }
+      #services .options-row .serv-opt-holder .serv-opt .serv-opt-num {
+        font-size: 5em;
+        padding: 0;
+        margin: 0; }
+      #services .options-row .serv-opt-holder .serv-opt .subtitle {
+        padding: 0;
+        margin: 0; }
+    #services .options-row .serv-opt-holder .active-option {
       background-color: #f74300; }
-      #services .options-row .active-option:hover {
+      #services .options-row .serv-opt-holder .active-option:hover {
         background-color: #f74300; }
-      #services .options-row .active-option .serv-opt {
-        color: #fff; }
-    #services .options-row .active-option:after {
+    #services .options-row .serv-opt-holder .active-option:after {
       content: "";
       width: 1.5em;
       height: 1.5em;
@@ -312,9 +336,12 @@ a {
       left: 15%;
       bottom: -7%; }
   #services .shown-serv-row {
+    width: 100%;
+    background: #fff;
     text-align: left;
     color: rgba(0, 0, 0, 0.57);
-    font-size: 1.1rem; }
+    font-size: 1.1rem;
+    position: absolute; }
   #services #serv-1 {
     display: none; }
   #services #serv-2 {

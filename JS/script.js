@@ -1,24 +1,29 @@
 $(function () {
+
+
+  // $(".serv-opt-about").click(function () {
+  //
+  // });
+
   $(".serv-opt").click(function () {
-    //if some vsible, hide all  show new
-    //add/remove active class from options
-    var target = $(this).attr("href");
-    var parent = $(this).parent()
-    //check if no ohter is open
-    // if ($('.serv-opt').each().hasClass("active-option"))
-      //close openned, open new
 
-    //if alredy open
-    if (parent.hasClass("active-option")) {
-      $(parent).removeClass("active-option");
-      $(target).toggle();
-      // $(target).css("display", "none");
+    var target = $(this).attr("href");  //ption to activate
 
-    } else {
-      $(target).toggle();
-      // $(target).css("display", "block");
-      $(parent).addClass("active-option");
+    // find whether there is an active option
+    var toDeactivate = ($(".serv-opt-holder").find(".active-option"));
+
+    if (toDeactivate == null) {             // if there is no active option
+      $(this).addClass('active-option');    // show clicked option
+    } else {                                // there already is option showed
+      var toHide = toDeactivate.attr("href"); // option to hide
+      if (toHide == target)  {                // if clicked on active hide it
+        $(this).removeClass('active-option');
+      } else {                          //  if clicked isnt active
+        $(toDeactivate).removeClass('active-option');
+        $(toHide).toggle();         // hide the showed option
+        $(this).addClass('active-option');
+      }
     }
-    // $(target).css
+    $(target).toggle();         // toggle the clicked
   });
 });
