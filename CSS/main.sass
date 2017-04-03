@@ -5,6 +5,7 @@ $shadow: rgba(#000000, 0.35)
 $white:#ffffff
 $whiteish: rgba(#fff, 0.90)
 $uber_light_grey: #f8f8f8
+$light_grey: #ebebeb
 $orange: #f74300
 $nav-title: #b1b1b1
 $input-border-focus: $orange
@@ -204,9 +205,11 @@ a
     margin-top: 30rem
     background: $white
     color: $main
-    border: 2px solid $white
+    font-weight: 700
+    // border: 2px solid $white
     &:hover, &:focus
-      // color: $orange
+      color: $white
+      background: $orange
 
 
 
@@ -392,7 +395,7 @@ a
         &:hover
           // color: #fff
           .subtitle, .serv-opt-num
-            color: #fff
+            color: $whiteish
           background: $orange
           transition: all 0.4s ease-out
 
@@ -432,45 +435,40 @@ a
     background: #fff
     color: $text
     font-size: 1.1rem
-    // position: relative
     display: none
-
-
     .shown-serv
+      // height: 490px
       position: relative
       margin: 0 auto
-      // height: 400px
       display: none
-      // width: 50%
       justify-content: center
+      width: 55%
       .shown-serv-content
         padding: 3em
         display: flex
+        flex-direction: row
         justify-content: space-around
         align-items: center
         text-align: left
-        // left: 50%
-        // top: 50%
+
         .shown-serv-num
-          font-size: 3rem
+          font-size: 4rem
           font-weight: 700
           color: $shadow
-      //   display: none
+          color: $light_grey
       h2
         // margin: 0
         // padding: 0.3em
         font-family: "Roboto Condensed"
         color: $main
-        font-size: 2.7rem
+        font-size: 2.3rem
       .text
+        // padding-left: 5em
+        margin-left: 4em
         font-size: 1.1rem
-        // li
-      // #serv-1
-      //   display: none
-      // #serv-2
-      //   display: none
-      // #serv-3
-      //   display: none
+        li
+          margin-bottom: 0.2em
+
 
 
 // =================================================
@@ -522,7 +520,7 @@ a
       margin-top: 5em
     input
       margin: 2em auto
-      // border-radius: 0
+      border-radius: 0
       height: 3.25em
       background: #fbfbfb
       &:hover, &:focus
@@ -556,7 +554,7 @@ a
       font-size: 1.1rem
       font-weight: 700
       &:hover, &:focus
-        box-shadow: 0 0.5rem 0.5em rgba(0,0,0,.15)
+        // box-shadow: 0 0.5rem 0.5em rgba(0,0,0,.15)
         background: $orange
         -webkit-transition: background 0.5s ease-out
         -moz-transition: background 0.5s ease-out
@@ -602,30 +600,27 @@ a
 
 footer
   background: $main
-  height: 200px
-  font-size: 2.35rem
-  text-align: center
-  // position: fixed
-  z-index: 1
-  bottom: 0
   width: 100%
+  text-align: center
 
-  .fa
-    color: $white
-    font-weight: 400
-    padding: 1em 2em
+  a
+    color: $light_grey
     &:hover, &:focus
       color: $orange
-
-  .contact-list
-    list-style: none
+  .language-list
     margin: 0
     padding-top: 0.75em
     li
       display: inline
 
-  .copyright
-    padding-bottom: 1em
-    margin: 0
+  .small-info
     color: $uber_light_grey
-    font-size: 0.25em
+    list-style: none
+    ul
+      padding: 0
+      margin: 0
+    li
+      display: inline
+    padding: 0
+
+    margin: 0

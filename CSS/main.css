@@ -160,7 +160,10 @@ a {
     margin-top: 30rem;
     background: #ffffff;
     color: rgba(0, 0, 0, 0.87);
-    border: 2px solid #ffffff; }
+    font-weight: 700; }
+    #home .home_button:hover, #home .home_button:focus {
+      color: #ffffff;
+      background: #f74300; }
 
 #about {
   position: relative;
@@ -317,7 +320,7 @@ a {
         background: #f74300;
         transition: all 0.4s ease-out; }
         #services .options-row .serv-opt-holder .serv-opt:hover .subtitle, #services .options-row .serv-opt-holder .serv-opt:hover .serv-opt-num {
-          color: #fff; }
+          color: rgba(255, 255, 255, 0.9); }
       #services .options-row .serv-opt-holder .serv-opt .serv-opt-num {
         font-size: 1em;
         font-weight: 700;
@@ -355,23 +358,29 @@ a {
       position: relative;
       margin: 0 auto;
       display: none;
-      justify-content: center; }
+      justify-content: center;
+      width: 55%; }
       #services .shown-serv-row .shown-serv .shown-serv-content {
         padding: 3em;
         display: flex;
+        flex-direction: row;
         justify-content: space-around;
         align-items: center;
         text-align: left; }
         #services .shown-serv-row .shown-serv .shown-serv-content .shown-serv-num {
-          font-size: 3rem;
+          font-size: 4rem;
           font-weight: 700;
-          color: rgba(0, 0, 0, 0.35); }
+          color: rgba(0, 0, 0, 0.35);
+          color: #ebebeb; }
       #services .shown-serv-row .shown-serv h2 {
         font-family: "Roboto Condensed";
         color: rgba(0, 0, 0, 0.87);
-        font-size: 2.7rem; }
+        font-size: 2.3rem; }
       #services .shown-serv-row .shown-serv .text {
+        margin-left: 4em;
         font-size: 1.1rem; }
+        #services .shown-serv-row .shown-serv .text li {
+          margin-bottom: 0.2em; }
 
 #references {
   position: relative;
@@ -409,6 +418,7 @@ a {
       margin-top: 5em; }
     #contact #mail input {
       margin: 2em auto;
+      border-radius: 0;
       height: 3.25em;
       background: #fbfbfb; }
       #contact #mail input:hover, #contact #mail input:focus {
@@ -440,7 +450,6 @@ a {
       font-size: 1.1rem;
       font-weight: 700; }
       #contact #mail .btn:hover, #contact #mail .btn:focus {
-        box-shadow: 0 0.5rem 0.5em rgba(0, 0, 0, 0.15);
         background: #f74300;
         -webkit-transition: background 0.5s ease-out;
         -moz-transition: background 0.5s ease-out;
@@ -482,28 +491,26 @@ a {
 
 footer {
   background: rgba(0, 0, 0, 0.87);
-  height: 200px;
-  font-size: 2.35rem;
-  text-align: center;
-  z-index: 1;
-  bottom: 0;
-  width: 100%; }
-  footer .fa {
-    color: #ffffff;
-    font-weight: 400;
-    padding: 1em 2em; }
-    footer .fa:hover, footer .fa:focus {
+  width: 100%;
+  text-align: center; }
+  footer a {
+    color: #ebebeb; }
+    footer a:hover, footer a:focus {
       color: #f74300; }
-  footer .contact-list {
-    list-style: none;
+  footer .language-list {
     margin: 0;
     padding-top: 0.75em; }
-    footer .contact-list li {
+    footer .language-list li {
       display: inline; }
-  footer .copyright {
-    padding-bottom: 1em;
-    margin: 0;
+  footer .small-info {
     color: #f8f8f8;
-    font-size: 0.25em; }
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    footer .small-info ul {
+      padding: 0;
+      margin: 0; }
+    footer .small-info li {
+      display: inline; }
 
 /*# sourceMappingURL=main.css.map */
