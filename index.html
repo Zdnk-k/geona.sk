@@ -6,19 +6,21 @@
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
     <!-- responzive sheiss -->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=0">
-  <link rel="shortcut icon" href="">
+    <link rel="shortcut icon" href="./icons/favicon/favicon-16x16.png">
     <!-- bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+
+    <!-- bootstrap local -->
+    <link rel="stylesheet" href="./CSS/bootstrap/bootstrap.min.css">
     <!-- styles.css link -->
    <link rel="stylesheet" href="./CSS/main.css">
     <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto|Montserrat|Roboto+Mono" rel="stylesheet">
-  <link rel="stylesheet" href="./CSS/linea-arrows.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto|Montserrat|Roboto+Mono|Open+Sans|Open+Sans+Condensed:300|Roboto+Condensed" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="./CSS/linea-arrows.css"> -->
   <link rel="stylesheet" href="./CSS/linea-styles.css">
 
-
-    <!-- font awesome  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- font awesome  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 
@@ -85,7 +87,7 @@
               <i class="linea-icon icon-basic-geolocalize-05"></i>
               <h2 class="subtitle">Geodetické práce</br></h2>
               <p class="text">Ponúkame práce v katastri nehnuteľností, práce v investičnej výstavbe...</p>
-              <a href="#serv-1" class="learn-more serv-opt-about">
+              <a href="#services" class="learn-more serv-opt-about">
                 <img src="./icons/arrow_right_orange.svg" alt="">
               </a>
             </div>
@@ -95,7 +97,7 @@
               <i class="linea-icon icon-basic-signs"></i>
               <h2 class="subtitle">Poradenstvo a služby</h2>
               <p class="text">pri vysporiadaní vlastníctva a zápise do katastra nehnutelnosti...</p>
-              <a href="#serv-2" class="learn-more serv-opt-about">
+              <a href="#services" class="learn-more serv-opt-about">
                 <img src="./icons/arrow_right_orange.svg" alt="">
               </a>
             </div>
@@ -105,7 +107,7 @@
               <i class="linea-icon icon-basic-pencil-ruler-pen"></i>
               <h2 class="subtitle">Riešenia na mieru</h2>
               <p class="text">Radi pre Vás vytvoríme riešenie presne na mieru Vašim potrebám...</p>
-              <a href="#serv-3" class="learn-more serv-opt-about">
+              <a href="#services" class="learn-more serv-opt-about">
                 <img src="./icons/arrow_right_orange.svg" alt="">
               </a>
             </div>
@@ -141,85 +143,167 @@
     </div>
 
     <section id="services" class="paralax-slow">
-      
-      <div class="container">
-        <h1 class="section-heading">Naše služby</h1>
-        <div class="row options-row">
-          <div class="serv-opt-holder col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <div class="serv-opt"  href="#serv-1" c>
-              <p class="serv-opt-num">1</p>
-              <p id="opt-serv-1" class="subtitle">
-              Geodetické práce</br> v </br>katastri nehnuteľností
-            </div>
-            </p>
+      <div class="pos-relative">
+        <!-- <div class="shown-serv-row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div id="serv-1" class="container shown-serv">
+            <h2>
+              Geodetické práce v katastri nehnuteľností
+            </h2>
+            <ol class="text">
+              <li>
+                Geometrické plány:
+                <ul>
+                  <li>Na majetkoprávne usporiadanie pozemkov</li>
+                  <li>Na rozdelenie spoluvlastníctva</li>
+                  <li>Na rozdelenie pozemkov</li>
+                  <li>Na oddelenie stavebnej parcely</li>
+                  <li>Na vyňatie z poľnohospodárskeho alebo lesného fondu</li>
+                  <li>Na porealizačné zameranie rozostavanej stavby k čerpaniu úveru z banky</li>
+                  <li>Na porealizačné zameranie novostavby ku kolaudácii</li>
+                  <li>Na zriadenie vecného bremena</li>
+                </ul>
+              </li>
+              <li>Vytyčovanie hraníc pozemkov</li>
+              <li>Registre obnovenej evidencie pozemkov-ROEP</li>
+              <li>Projekty pozemkových úprav-PPÚ</li>
+            </ol>
           </div>
-          <div class="serv-opt-holder col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <div class="serv-opt" href="#serv-2">
-              <p class="serv-opt-num">2</p>
-              <p id="opt-serv-2"  class="subtitle">
-                Geodetické práce</br> v </br>investičnej </br>výstavbe
-              </p>
-            </div>
+          <div id="serv-2" class="container shown-serv">
+            <h2>
+              Geodetické práce v investičnej výstavbe
+            </h2>
+            <ul class="text">
+              <li>Účelové mapovanie polohopisu a výškopisu územia k projektovej príprave stavieb</li>
+              <li>Vytýčenie, zameranie a zákres podzemných inžinierskych sietí</li>
+              <li>Vytyčovacie práce pre začatím a počas stavebých prác</li>
+              <li>Porealizačné zameranie skutočného vyhotovenia stavby</li>
+              <li>Porealizačné zameranie podzemných vedení za účelom zriadenia vecného bremena</li>
+              <li>Geometrické plány na zápis stavieb do katastra nehnuteľností</li>
+              <li>Výkupové elaboráty na výkup pozemkov pod stavbami</li>
+              <li>Kontrolné merania stavieb počas prevádzky – horizontálne a vertikálne pohyby</li>
+              <li>Meranie deformácii žeriavových dráh a žeriavových mostov</li>
+            </ul>
           </div>
-          <div class="serv-opt-holder col-lg-4 col-md-4 col-sm-4 col-xs-12">
-              <div class="serv-opt" href="#serv-3">
-                <p class="serv-opt-num">3</p>
-                <p id="opt-serv-3"  class="subtitle">
+          <div id="serv-3" class="container shown-serv">
+              <h2>
+                Poradenstvo a služby pri vysporiadaní vlastníctva a zápise do katastra
+              </h2>
+              <ul class="text">
+                <li>Zabezpečenie dokladov k vyňatiu pozemkov z poľnohospodárskeho alebo lesného fondu</li>
+                <li>Zabezpečenie potrebných dokladov ku geom.plánu pre notársky úrad</li>
+                <li>Identifikácia parcely v teréne – predbežné približné vytýčenie</li>
+                <li>Prešetrenie vlastníctva k pozemkom podľa pôvodnych zápisov v pozemkovej knihe</li>
+                <li>Zabezpečenie výpisov z LV alebo PKV</li>
+                <li>Poradenstvo pri postupe nadobudnutia vlastníctva do A do Z</li>
+              </ul>
+            </div>
+        </div> -->
+
+        <div class="container">
+          <h1 class="section-heading">Naše služby</h1>
+          <div class="row options-row">
+
+            <!-- SERVICE No. 1 -->
+            <div class="serv-opt-holder col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div href="#serv-1" id="opt-serv1" class="serv-opt">
+                <p class="serv-opt-num">01 /</p>
+                <p class="subtitle">
+                  Geodetické práce</br> v </br>katastri nehnuteľností
+                </p>
+              </div>
+            </div>
+            <!-- SERVICE No. 2 -->
+            <div class="serv-opt-holder col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div href="#serv-2" id="opt-serv2" class="serv-opt">
+                <p class="serv-opt-num">02 /</p>
+                <p class="subtitle">
+                  Geodetické práce</br> v </br>investičnej</br> výstavbe
+                </p>
+              </div>
+            </div>
+            <!-- SERVICE No. 3 -->
+            <div class="serv-opt-holder col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div href="#serv-3" id="opt-serv3" class="serv-opt">
+                <p class="serv-opt-num">03 /</p>
+                <p class="subtitle">
                   Poradenstvo a služby pri vysporiadaní vlastníctva a zápise do katastra
                 </p>
               </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div id="serv-1"class="col-lg-12 col-md-12 col-sm-12 col-xs-12 shown-serv-row">
-        <div class="container">
-          <ol>
-            <li>
-              Geometrické plány:
-              <ul>
-                <li>Na majetkoprávne usporiadanie pozemkov</li>
-                <li>Na rozdelenie spoluvlastníctva</li>
-                <li>Na rozdelenie pozemkov</li>
-                <li>Na oddelenie stavebnej parcely</li>
-                <li>Na vyňatie z poľnohospodárskeho alebo lesného fondu</li>
-                <li>Na porealizačné zameranie rozostavanej stavby k čerpaniu úveru z banky</li>
-                <li>Na porealizačné zameranie novostavby ku kolaudácii</li>
-                <li>Na zriadenie vecného bremena</li>
+        <div class="shown-serv-row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div id="serv-1" class="container shown-serv">
+            <div class="shown-serv-content">
+              <div class="title-shizz">
+                <div class="shown-serv-num">01/</div>
+                <h2>
+                  Geodetické </br>práce v</br> katastri </br> nehnuteľností
+                </h2>
+
+              </div>
+              <ol class="text">
+                <li>
+                  Geometrické plány:
+                  <ul>
+                    <li>Na majetkoprávne usporiadanie pozemkov</li>
+                    <li>Na rozdelenie spoluvlastníctva</li>
+                    <li>Na rozdelenie pozemkov</li>
+                    <li>Na oddelenie stavebnej parcely</li>
+                    <li>Na vyňatie z poľnohospodárskeho alebo lesného fondu</li>
+                    <li>Na porealizačné zameranie rozostavanej stavby k čerpaniu úveru z banky</li>
+                    <li>Na porealizačné zameranie novostavby ku kolaudácii</li>
+                    <li>Na zriadenie vecného bremena</li>
+                  </ul>
+                </li>
+                <li>Vytyčovanie hraníc pozemkov</li>
+                <li>Registre obnovenej evidencie pozemkov-ROEP</li>
+                <li>Projekty pozemkových úprav-PPÚ</li>
+              </ol>
+            </div>
+          </div>
+          <div id="serv-2" class="container shown-serv">
+            <div class="shown-serv-content">
+              <div class="title-shizz">
+                <div class="shown-serv-num">02/</div>
+                <h2>
+                  Geodetické </br>práce v</br> investičnej </br> výstavbe
+                </h2>
+
+              </div>
+              <ul class="text">
+                <li>Účelové mapovanie polohopisu a výškopisu územia k projektovej príprave stavieb</li>
+                <li>Vytýčenie, zameranie a zákres podzemných inžinierskych sietí</li>
+                <li>Vytyčovacie práce pre začatím a počas stavebých prác</li>
+                <li>Porealizačné zameranie skutočného vyhotovenia stavby</li>
+                <li>Porealizačné zameranie podzemných vedení za účelom zriadenia vecného bremena</li>
+                <li>Geometrické plány na zápis stavieb do katastra nehnuteľností</li>
+                <li>Výkupové elaboráty na výkup pozemkov pod stavbami</li>
+                <li>Kontrolné merania stavieb počas prevádzky – horizontálne a vertikálne pohyby</li>
+                <li>Meranie deformácii žeriavových dráh a žeriavových mostov</li>
               </ul>
-            </li>
-            <li>Vytyčovanie hraníc pozemkov</li>
-            <li>Registre obnovenej evidencie pozemkov-ROEP</li>
-            <li>Projekty pozemkových úprav-PPÚ</li>
-          </ol>
-        </div>
-      </div>
+            </div>
+          </div>
+          <div id="serv-3" class="container shown-serv">
+            <div class="shown-serv-content">
+              <div class="title-shizz">
+                <div class="shown-serv-num">03/</div>
+                <h2>
+                  Poradenstvo a služby</br> pri vysporiadaní vlastníctva a </br> zápise do katastra
+                </h2>
 
-      <div id="serv-2" class="shown-serv-row row">
-        <div class="container">
-          <ul>
-            <li>Účelové mapovanie polohopisu a výškopisu územia k projektovej príprave stavieb</li>
-            <li>Vytýčenie, zameranie a zákres podzemných inžinierskych sietí</li>
-            <li>Vytyčovacie práce pre začatím a počas stavebých prác</li>
-            <li>Porealizačné zameranie skutočného vyhotovenia stavby</li>
-            <li>Porealizačné zameranie podzemných vedení za účelom zriadenia vecného bremena</li>
-            <li>Geometrické plány na zápis stavieb do katastra nehnuteľností</li>
-            <li>Výkupové elaboráty na výkup pozemkov pod stavbami</li>
-            <li>Kontrolné merania stavieb počas prevádzky – horizontálne a vertikálne pohyby</li>
-            <li>Meranie deformácii žeriavových dráh a žeriavových mostov</li>
-          </ul>
-        </div>
-      </div>
+              </div>
+              <ul class="text">
+                <li>Zabezpečenie dokladov k vyňatiu pozemkov z poľnohospodárskeho alebo lesného fondu</li>
+                <li>Zabezpečenie potrebných dokladov ku geom.plánu pre notársky úrad</li>
+                <li>Identifikácia parcely v teréne – predbežné približné vytýčenie</li>
+                <li>Prešetrenie vlastníctva k pozemkom podľa pôvodnych zápisov v pozemkovej knihe</li>
+                <li>Zabezpečenie výpisov z LV alebo PKV</li>
+                <li>Poradenstvo pri postupe nadobudnutia vlastníctva do A do Z</li>
+              </ul>
 
-      <div id="serv-3" class="shown-serv-row row">
-        <div class="cotainer">
-          <ul>
-            <li>Zabezpečenie dokladov k vyňatiu pozemkov z poľnohospodárskeho alebo lesného fondu</li>
-            <li>Zabezpečenie potrebných dokladov ku geom.plánu pre notársky úrad</li>
-            <li>Identifikácia parcely v teréne – predbežné približné vytýčenie</li>
-            <li>Prešetrenie vlastníctva k pozemkom podľa pôvodnych zápisov v pozemkovej knihe</li>
-            <li>Zabezpečenie výpisov z LV alebo PKV</li>
-            <li>Poradenstvo pri postupe nadobudnutia vlastníctva do A do Z</li>
-          </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -349,19 +433,21 @@
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- <script src="JS/bootstrap.min.js"></script> -->
     <!-- <script src="JS/jqquery.js"></script> -->
+    <script src="JS/bootstrap/bootstrap.min.js"></script>
     <script src="JS/main.js"></script>
     <script src="JS/script.js"></script>
-
+    <!-- GOOGLE MAPS API -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXnTDuATCwSp0l75F4wpwEJXUZdShpds0"></script>
     <!-- <script src="JS/gmap.js"></script> -->
   </body>
 </html>
 
-
+<!-- TODO: font awesome offline -->
+<!-- TODO: fonts offline -->
 <!-- TODO: nav logo -->
 <!-- TODO: nav shrink -->
 <!-- TODO: home images -->
 <!-- TODO: map -->
 <!-- TODO:  -->
+<!-- TODO: images -->

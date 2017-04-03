@@ -1,4 +1,7 @@
 html, body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
   height: 100%;
   width: 100%;
@@ -11,23 +14,34 @@ html, body {
   text-align: center; }
 
 .title, .subtitle {
-  font-family: "Roboto Mono";
   color: rgba(0, 0, 0, 0.87);
-  text-decoration: none;
   text-transform: uppercase; }
 
+.title {
+  font-family: "Roboto"; }
+
+.subtitle {
+  font-size: 1.4rem;
+  font-family: "Roboto Condensed"; }
+
 .text {
-  color: rgba(0, 0, 0, 0.57);
+  color: rgba(0, 0, 0, 0.7);
   font-size: 1rem; }
 
 .section-heading {
-  font-family: "Roboto";
-  font-size: 1.5rem;
+  font-family: "Roboto Condensed";
+  font-size: 1.2rem;
+  font-weight: 300;
   text-transform: uppercase;
   margin: 6em 0 2em 0; }
 
-.subtitle {
-  font-size: 1.2rem; }
+.section-heading::after {
+  content: "";
+  height: 1px;
+  max-width: 2em;
+  display: block;
+  margin: 0.5em auto;
+  background: #f74300; }
 
 a {
   text-decoration: none;
@@ -77,7 +91,7 @@ a {
       .nav #navbar-links li a, .navbar #navbar-links li a {
         font-size: 14px;
         text-transform: uppercase;
-        font-family: "Roboto";
+        font-family: "Roboto Condensed";
         font-weight: 500;
         color: rgba(255, 255, 255, 0.9); }
         .nav #navbar-links li a:hover, .nav #navbar-links li a:focus, .navbar #navbar-links li a:hover, .navbar #navbar-links li a:focus {
@@ -130,7 +144,7 @@ a {
     #home .heading_content .title {
       text-transform: uppercase;
       font-weight: 200;
-      font-family: "Noto Sans";
+      font-family: "Roboto Condensed";
       font-size: 6.5rem;
       padding: 0.3em;
       margin: 0.3em;
@@ -152,19 +166,12 @@ a {
   position: relative;
   z-index: 6;
   margin: 0 auto;
-  background: linear-gradient(rgba(248, 248, 248, 0.9), rgba(248, 248, 248, 0.9)), url("../images/map_big1.jpg");
+  background: linear-gradient(rgba(248, 248, 248, 0.75), rgba(248, 248, 248, 0.75)), url("../images/map_big3.jpg");
   background-attachment: fixed; }
-  #about .section-heading::after {
-    content: "";
-    height: 1px;
-    max-width: 1.5em;
-    display: block;
-    margin: 0.5em auto;
-    background: #f74300; }
   #about .subtitle {
-    color: rgba(0, 0, 0, 0.57);
+    color: rgba(0, 0, 0, 0.7);
     font-weight: 100;
-    font-size: 0.9rem; }
+    font-size: 1.1rem; }
   #about .about-item-row {
     margin: 2em auto; }
     #about .about-item-row .about-item-content {
@@ -207,7 +214,7 @@ a {
           transition: opacity 0.7s ease-in-out; }
       #about .about-item-row .about-item-content .subtitle {
         color: rgba(0, 0, 0, 0.87);
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         margin: 2em 0;
         display: block; }
       #about .about-item-row .about-item-content .learn-more {
@@ -268,7 +275,7 @@ a {
   position: relative;
   z-index: 5;
   height: 350px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/headerrr.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/headerrr.jpg);
   color: rgba(255, 255, 255, 0.9); }
   #first_window i {
     font-size: 4rem;
@@ -282,19 +289,13 @@ a {
     font-weight: lighter; }
 
 #services {
-  position: relative;
-  z-index: 4;
-  background-image: linear-gradient(rgba(248, 248, 248, 0.9), rgba(248, 248, 248, 0.9)), url("../images/map_big1.jpg");
+  background-image: linear-gradient(rgba(248, 248, 248, 0.75), rgba(248, 248, 248, 0.74)), url("../images/map_big3.jpg");
   background-size: cover;
   background-repeat: repeat;
-  background-attachment: fixed; }
-  #services .section-heading::after {
-    content: "";
-    height: 1px;
-    max-width: 2em;
-    display: block;
-    margin: 0.5em auto;
-    background: #f74300; }
+  background-attachment: fixed;
+  height: 900; }
+  #services .section-heading {
+    text-align: center; }
   #services .options-row {
     padding: 5em; }
     #services .options-row .serv-opt-holder .serv-opt {
@@ -314,16 +315,25 @@ a {
       color: rgba(0, 0, 0, 0.87); }
       #services .options-row .serv-opt-holder .serv-opt:hover {
         background: #f74300;
-        transition: background 0.4s ease-out; }
+        transition: all 0.4s ease-out; }
+        #services .options-row .serv-opt-holder .serv-opt:hover .subtitle, #services .options-row .serv-opt-holder .serv-opt:hover .serv-opt-num {
+          color: #fff; }
       #services .options-row .serv-opt-holder .serv-opt .serv-opt-num {
-        font-size: 5em;
+        font-size: 1em;
+        font-weight: 700;
+        color: rgba(0, 0, 0, 0.35);
         padding: 0;
         margin: 0; }
       #services .options-row .serv-opt-holder .serv-opt .subtitle {
         padding: 0;
         margin: 0; }
     #services .options-row .serv-opt-holder .active-option {
+      cursor: default;
       background-color: #f74300; }
+      #services .options-row .serv-opt-holder .active-option .subtitle {
+        color: #fff; }
+      #services .options-row .serv-opt-holder .active-option .serv-opt-num {
+        color: rgba(255, 255, 255, 0.9); }
       #services .options-row .serv-opt-holder .active-option:hover {
         background-color: #f74300; }
     #services .options-row .serv-opt-holder .active-option:after {
@@ -334,20 +344,34 @@ a {
       transform: rotate(45deg);
       position: absolute;
       left: 15%;
-      bottom: -7%; }
+      bottom: -6%; }
   #services .shown-serv-row {
     width: 100%;
     background: #fff;
-    text-align: left;
-    color: rgba(0, 0, 0, 0.57);
+    color: rgba(0, 0, 0, 0.7);
     font-size: 1.1rem;
-    position: absolute; }
-  #services #serv-1 {
     display: none; }
-  #services #serv-2 {
-    display: none; }
-  #services #serv-3 {
-    display: none; }
+    #services .shown-serv-row .shown-serv {
+      position: relative;
+      margin: 0 auto;
+      display: none;
+      justify-content: center; }
+      #services .shown-serv-row .shown-serv .shown-serv-content {
+        padding: 3em;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: left; }
+        #services .shown-serv-row .shown-serv .shown-serv-content .shown-serv-num {
+          font-size: 3rem;
+          font-weight: 700;
+          color: rgba(0, 0, 0, 0.35); }
+      #services .shown-serv-row .shown-serv h2 {
+        font-family: "Roboto Condensed";
+        color: rgba(0, 0, 0, 0.87);
+        font-size: 2.7rem; }
+      #services .shown-serv-row .shown-serv .text {
+        font-size: 1.1rem; }
 
 #references {
   position: relative;
@@ -429,8 +453,7 @@ a {
   margin: 3em 0 0 0;
   height: 400px;
   position: relative;
-  z-index: 8;
-  margin-bottom: 200px; }
+  z-index: 8; }
   .map-row .overlay {
     background: transparent;
     position: relative;
@@ -462,7 +485,6 @@ footer {
   height: 200px;
   font-size: 2.35rem;
   text-align: center;
-  position: fixed;
   z-index: 1;
   bottom: 0;
   width: 100%; }

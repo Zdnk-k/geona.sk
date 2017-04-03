@@ -1,5 +1,6 @@
 $main: rgba(#000000, 0.87)
-$text: rgba(#000000, 0.57)
+// $grey: rgba(#000, 0.)
+$text: rgba(#000000, 0.7)
 $shadow: rgba(#000000, 0.35)
 $white:#ffffff
 $whiteish: rgba(#fff, 0.90)
@@ -9,6 +10,9 @@ $nav-title: #b1b1b1
 $input-border-focus: $orange
 
 html, body
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
   font-size: 16px
   height: 100%
   width: 100%
@@ -21,24 +25,37 @@ html, body
   text-align: center
 
 .title, .subtitle
-  font-family: 'Roboto Mono'
   color: $main
-  text-decoration: none
   text-transform: uppercase
+
+.title
+  font-family: 'Roboto'
+
+.subtitle
+  // font-weight:  700
+  font-size: 1.4rem
+  font-family: 'Roboto Condensed'
 
 .text
   color: $text
   font-size: 1rem
 
 .section-heading
-  font-family: 'Roboto'
-  font-size: 1.5rem
+  font-family: 'Roboto Condensed'
+  font-size: 1.2rem
+  font-weight: 300
   text-transform: uppercase
   // font-weight: 700
   margin: 6em 0 2em 0
 
-.subtitle
-  font-size: 1.2rem
+.section-heading::after
+  content: ''
+  height: 1px
+  max-width: 2em
+  display: block
+  margin: 0.5em auto
+  background: $orange
+
 
 a
   text-decoration: none
@@ -64,7 +81,9 @@ a
     background: $orange
     text-decoration: none
 
-// ================ navbar styles ================
+// =================================================
+// ================= NAVBAR STYLE =================
+// =================================================
 
 .nav, .navbar
   margin: 0
@@ -95,7 +114,7 @@ a
       a
         font-size: 14px
         text-transform: uppercase
-        font-family: 'Roboto'
+        font-family: 'Roboto Condensed'
         font-weight: 500
         color: $whiteish
         &:hover, &:focus
@@ -108,7 +127,9 @@ a
 
 
 
-// =============================== NAVBAR SMALL======================
+// =================================================
+// ================= NAVFIXED STYLE =================
+// =================================================
 .nav-fixed
   height: 1.25em
   background: #fff
@@ -130,7 +151,9 @@ a
     &:hover, &:focus
       color: $orange
 
-// ================ Home styles ================
+// =================================================
+// ================= HOME STYLE =================
+// =================================================
 #home
   background: linear-gradient(rgba(#000, 0.3), rgba(#000, 0.3) ), url("../images/first.jpg")
   background-repeat: no-repeat
@@ -161,7 +184,7 @@ a
     .title
       text-transform: uppercase
       font-weight: 200
-      font-family: 'Noto Sans'
+      font-family: 'Roboto Condensed'
       font-size: 6.5rem
       padding: 0.3em
       margin: 0.3em
@@ -189,28 +212,20 @@ a
 
 
 // =============================================
-// ============= ABOUT =========================
+// ============= ABOUT STYLES ==================
 // =============================================
 #about
   position: relative
   z-index: 6
   margin: 0 auto
   // background: $uber_light_grey
-  background: linear-gradient( rgba($uber_light_grey, 0.9), rgba($uber_light_grey, 0.9) ), url("../images/map_big1.jpg")
+  background: linear-gradient( rgba($uber_light_grey, 0.75), rgba($uber_light_grey, 0.75) ), url("../images/map_big3.jpg")
   background-attachment: fixed
-
-  .section-heading::after
-    content: ''
-    height: 1px
-    max-width: 1.5em
-    display: block
-    margin: 0.5em auto
-    background: $orange
 
   .subtitle
     color: $text
     font-weight: 100
-    font-size: 0.9rem
+    font-size: 1.1rem
 
   .about-item-row
     margin: 2em auto
@@ -258,7 +273,7 @@ a
 
       .subtitle
         color: $main
-        font-size: 1.2rem
+        font-size: 1.3rem
         margin: 2em 0
         display: block
 
@@ -327,7 +342,7 @@ a
   position: relative
   z-index: 5
   height: 350px
-  background-image: linear-gradient( rgba($main, 0.5), rgba($main, 0.5) ), url(../images/headerrr.jpg)
+  background-image: linear-gradient( rgba($main, 0.8), rgba($main, 0.8) ), url(../images/headerrr.jpg)
   color: $whiteish
   i
     font-size: 4rem
@@ -341,26 +356,23 @@ a
     text-transform: uppercase
     font-weight: lighter
 
+
+// =================================================
+// ================= SERVICES STYLE ================
+// =================================================
 #services
-  position: relative
-  z-index: 4
-  // background: #fff
-  // background-color: $uber_light_grey
-  background-image: linear-gradient( rgba($uber_light_grey, 0.9), rgba($uber_light_grey, 0.9) ), url("../images/map_big1.jpg")
-  background-size: cover
-  background-repeat: repeat
-  background-attachment: fixed
-  .section-heading::after
-    content: ''
-    height: 1px
-    max-width: 2em
-    display: block
-    margin: 0.5em auto
-    background: $orange
+  background:
+    image: linear-gradient( rgba($uber_light_grey, 0.75), rgba($uber_light_grey, 0.74) ), url("../images/map_big3.jpg")
+    size: cover
+    repeat: repeat
+    attachment: fixed
+  height: 900
+
+  .section-heading
+    text-align: center
 
   .options-row
     padding: 5em
-
     .serv-opt-holder
       .serv-opt
         padding: 2em
@@ -373,27 +385,35 @@ a
         cursor: pointer
         justify-content: center
         align-items: flex-start
-        // align-items: stretch
         text-align: left
         height: 100%
         width: 100%
         color: $main
         &:hover
           // color: #fff
-          .subtitle
-            // color: #fff
+          .subtitle, .serv-opt-num
+            color: #fff
           background: $orange
-          transition: background 0.4s ease-out
+          transition: all 0.4s ease-out
+
         .serv-opt-num
-          font-size: 5em
+          font-size: 1em
+          font-weight: 700
+          color: $shadow
           padding: 0
           margin: 0
         .subtitle
           // font-weight: 700
+          // font-family: 'Roboto Condensed'
           padding: 0
           margin: 0
       .active-option
+        cursor: default
         background-color: $orange
+        .subtitle
+          color: #fff
+        .serv-opt-num
+          color: $whiteish
         &:hover
           background-color: $orange
 
@@ -405,28 +425,57 @@ a
         transform: rotate(45deg)
         position: absolute
         left: 15%
-        bottom: -7%
+        bottom: -6%
 
   .shown-serv-row
-    // margin: 5rem 0 5rem 15%
     width: 100%
     background: #fff
-    // margin-bottom: 4em
-    text-align: left
     color: $text
     font-size: 1.1rem
-    position: absolute
-    // z-index: 5
-
-  #serv-1
-    display: none
-  #serv-2
-    display: none
-  #serv-3
+    // position: relative
     display: none
 
 
+    .shown-serv
+      position: relative
+      margin: 0 auto
+      // height: 400px
+      display: none
+      // width: 50%
+      justify-content: center
+      .shown-serv-content
+        padding: 3em
+        display: flex
+        justify-content: space-around
+        align-items: center
+        text-align: left
+        // left: 50%
+        // top: 50%
+        .shown-serv-num
+          font-size: 3rem
+          font-weight: 700
+          color: $shadow
+      //   display: none
+      h2
+        // margin: 0
+        // padding: 0.3em
+        font-family: "Roboto Condensed"
+        color: $main
+        font-size: 2.7rem
+      .text
+        font-size: 1.1rem
+        // li
+      // #serv-1
+      //   display: none
+      // #serv-2
+      //   display: none
+      // #serv-3
+      //   display: none
 
+
+// =================================================
+// ================= REFERENCES STYLE =================
+// =================================================
 #references
   position: relative
   z-index: 3
@@ -438,8 +487,9 @@ a
   margin: 2em
   height: 400px
 
-
-
+// =================================================
+// ================= CONTACT STYLE =================
+// =================================================
 #contact
   background: #fff
 
@@ -520,7 +570,7 @@ a
   height: 400px
   position: relative
   z-index: 8
-  margin-bottom: 200px
+  // margin-bottom: 200px
   .overlay
     background: transparent
     position: relative
@@ -555,7 +605,7 @@ footer
   height: 200px
   font-size: 2.35rem
   text-align: center
-  position: fixed
+  // position: fixed
   z-index: 1
   bottom: 0
   width: 100%
