@@ -30,7 +30,7 @@ html, body {
 
 .section-heading {
   font-family: "Roboto Condensed";
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 300;
   text-transform: uppercase;
   margin: 6em 0 2em 0; }
@@ -55,7 +55,6 @@ a {
   color: rgba(0, 0, 0, 0.87);
   padding: 0.5em 3.2em;
   text-decoration: none;
-  text-transform: uppercase;
   border: none;
   outline: none;
   border-radius: 0;
@@ -66,18 +65,49 @@ a {
     background: #f74300;
     text-decoration: none; }
 
+.btn-row {
+  margin: 4em auto; }
+  .btn-row .button {
+    width: 20%;
+    position: relative;
+    padding: 0.5rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.87);
+    background-color: transparent;
+    border: 3px solid rgba(0, 0, 0, 0.87); }
+    .btn-row .button:hover, .btn-row .buttonfocus {
+      border: 4px solid #f74300;
+      -webkit-transition: all 0.1s linear;
+      -moz-transition: all 0.1s linear;
+      -o-transition: all 0.1s linear;
+      transition: all 0.1s linear; }
+  .btn-row .button::before {
+    font-family: "linea-basic-10";
+    content: ".";
+    font-size: 2.3em;
+    color: #000;
+    position: absolute;
+    width: 2rem;
+    display: block;
+    left: -50px;
+    top: -7px; }
+
 .navbar {
   background-color: transparent;
-  border: none; }
+  border: none;
+  transition: background-color 0.2s linear; }
   .navbar .navbar-brand {
     color: rgba(255, 255, 255, 0.9); }
+    .navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
+      color: #f74300;
+      transition: color 0.2s ease-in-out; }
   .navbar #navbar-links li a {
     color: rgba(255, 255, 255, 0.9);
     text-transform: uppercase;
     font-size: 0.75rem; }
     .navbar #navbar-links li a:hover, .navbar #navbar-links li a:focus {
       color: #f74300;
-      transition: color 0.4s ease-in-out; }
+      transition: color 0.2s ease-in-out; }
 
 .nav-fixed {
   background: #ffffff;
@@ -91,9 +121,9 @@ a {
       transition: color 0.4s ease-in-out; }
 
 #home {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/first.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/tatry.jpg");
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center;
   background-size: cover;
   background-attachment: fixed;
   padding: 0;
@@ -116,27 +146,24 @@ a {
       color: #ffffff; }
     #home .heading_content .title {
       text-transform: uppercase;
-      font-weight: 200;
-      font-family: "Roboto Condensed";
       font-size: 6.5rem;
       padding: 0.3em;
       margin: 0.3em;
       border-bottom: solid 0.3rem #ffffff;
       border-spacing: 0.3em; }
     #home .heading_content .subtitle {
-      font-weight: 300;
       text-transform: uppercase;
       color: rgba(255, 255, 255, 0.9);
       margin-bottom: 0.5em;
       padding-bottom: 1em; }
   #home .home_button {
     margin-top: 30rem;
-    background: #ffffff;
-    color: rgba(0, 0, 0, 0.87);
-    font-weight: 700; }
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.9);
+    border: 3px solid rgba(255, 255, 255, 0.9); }
     #home .home_button:hover, #home .home_button:focus {
-      color: #ffffff;
-      background: #f74300; }
+      border: 4px solid #ffffff;
+      color: #ffffff; }
 
 #about {
   position: relative;
@@ -210,40 +237,10 @@ a {
         #about .about-item-row .about-item-content .learn-more:hover {
           margin-left: 1.5em;
           transition: margin-left 0.5s ease-out;
-          -webkit-transition: margin-left 0.5s ease-out;
-          -moz-transition: margin-left 0.5s ease-out;
-          -o-transition: margin-left 0.5s ease-out; }
-  #about .btn-row {
-    margin: 4em auto;
-    text-align: center; }
-    #about .btn-row .button {
-      width: 20%;
-      position: relative;
-      padding: 0.5rem;
-      font-weight: 700;
-      color: rgba(0, 0, 0, 0.87);
-      background: #fff; }
-      #about .btn-row .button:hover, #about .btn-row .buttonfocus {
-        background: #f74300;
-        color: rgba(0, 0, 0, 0.87);
-        -webkit-transition: all 0.5s ease-in-out;
-        -moz-transition: all 0.5s ease-in-out;
-        -o-transition: all 0.5s ease-in-out;
-        transition: all 0.5s ease-in-out; }
-    #about .btn-row .button::before {
-      font-family: "linea-basic-10";
-      content: ".";
-      font-size: 2em;
-      font-weight: 700;
-      color: rgba(0, 0, 0, 0.87);
-      position: absolute;
-      width: 2rem;
-      display: block;
-      left: -40px;
-      top: -5px; }
-    #about .btn-row:hover, #about .btn-row:focus {
-      color: #f74300; }
-  #about #who {
+          -webkit-transition: margin-left 0.4s ease-out;
+          -moz-transition: margin-left 0.4s ease-out;
+          -o-transition: margin-left 0.4s ease-out; }
+  #about #in-person {
     width: 100%;
     background: #fff; }
 
@@ -251,7 +248,7 @@ a {
   position: relative;
   z-index: 5;
   height: 350px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/headerrr.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/maps.jpg");
   color: rgba(255, 255, 255, 0.9); }
   #first_window i {
     font-size: 4rem;
@@ -268,97 +265,78 @@ a {
   background-image: linear-gradient(rgba(248, 248, 248, 0.75), rgba(248, 248, 248, 0.74)), url("../images/map_big3.jpg");
   background-size: cover;
   background-repeat: repeat;
-  background-attachment: fixed;
-  height: 900; }
+  background-attachment: fixed; }
   #services .section-heading {
-    text-align: center; }
-  #services .options-row {
-    padding: 5em; }
-    #services .options-row .serv-opt-holder .serv-opt {
-      padding: 2em;
-      height: 100%;
-      width: 6em;
-      background: #fff;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      cursor: pointer;
-      justify-content: center;
-      align-items: flex-start;
-      text-align: left;
-      height: 100%;
-      width: 100%;
-      color: rgba(0, 0, 0, 0.87); }
-      #services .options-row .serv-opt-holder .serv-opt:hover {
-        background: #f74300;
-        transition: all 0.4s ease-out; }
-        #services .options-row .serv-opt-holder .serv-opt:hover .subtitle, #services .options-row .serv-opt-holder .serv-opt:hover .serv-opt-num {
-          color: rgba(255, 255, 255, 0.9); }
-      #services .options-row .serv-opt-holder .serv-opt .serv-opt-num {
-        font-size: 1em;
-        font-weight: 700;
-        color: rgba(0, 0, 0, 0.35);
-        padding: 0;
-        margin: 0; }
-      #services .options-row .serv-opt-holder .serv-opt .subtitle {
-        padding: 0;
-        margin: 0; }
-    #services .options-row .serv-opt-holder .active-option {
-      cursor: default;
-      background-color: #f74300; }
-      #services .options-row .serv-opt-holder .active-option .subtitle {
-        color: #fff; }
-      #services .options-row .serv-opt-holder .active-option .serv-opt-num {
-        color: rgba(255, 255, 255, 0.9); }
-      #services .options-row .serv-opt-holder .active-option:hover {
-        background-color: #f74300; }
-    #services .options-row .serv-opt-holder .active-option:after {
-      content: "";
-      width: 1.5em;
-      height: 1.5em;
-      background-color: #f74300;
-      transform: rotate(45deg);
-      position: absolute;
-      left: 15%;
-      bottom: -6%; }
-  #services .shown-serv-row {
-    width: 100%;
-    background: #fff;
-    color: rgba(0, 0, 0, 0.7);
-    font-size: 1.1rem;
-    display: none; }
-    #services .shown-serv-row .shown-serv {
-      position: relative;
-      margin: 0 auto;
-      display: none;
-      justify-content: center;
-      width: 55%; }
-      #services .shown-serv-row .shown-serv .shown-serv-content {
-        padding: 3em;
+    margin-bottom: 3em; }
+  #services .serv-row {
+    margin-bottom: 3em;
+    display: flex;
+    justify-content: center; }
+    #services .serv-row .serv-opt-item {
+      padding: 0; }
+      #services .serv-row .serv-opt-item .serv-opt-cont {
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        text-align: left; }
-        #services .shown-serv-row .shown-serv .shown-serv-content .shown-serv-num {
-          font-size: 4rem;
+        align-items: flex-end;
+        justify-content: flex-start;
+        box-shadow: 0.3em 0.3em 0.3em rgba(0, 0, 0, 0.35);
+        background: #fff;
+        text-align: left;
+        margin: 0;
+        padding: 1em 2em;
+        transform: translateY(0);
+        height: 305px;
+        transition: all 0.3s ease-in-out; }
+        #services .serv-row .serv-opt-item .serv-opt-cont:hover, #services .serv-row .serv-opt-item .serv-opt-cont:focus {
+          transform: translateY(-10px); }
+        #services .serv-row .serv-opt-item .serv-opt-cont h2 {
+          z-index: 1;
+          position: relative;
+          font-family: "Roboto Condensed";
+          color: rgba(0, 0, 0, 0.87);
+          font-size: 2.5rem; }
+        #services .serv-row .serv-opt-item .serv-opt-cont .serv-num {
+          font-family: "Roboto";
+          position: absolute;
+          z-index: 0;
+          font-size: 13rem;
           font-weight: 700;
-          color: rgba(0, 0, 0, 0.35);
-          color: #ebebeb; }
-      #services .shown-serv-row .shown-serv h2 {
-        font-family: "Roboto Condensed";
-        color: rgba(0, 0, 0, 0.87);
-        font-size: 2.3rem; }
-      #services .shown-serv-row .shown-serv .text {
-        margin-left: 4em;
-        font-size: 1.1rem; }
-        #services .shown-serv-row .shown-serv .text li {
-          margin-bottom: 0.2em; }
+          color: #f8f8f8; }
+    #services .serv-row .serv-cont {
+      margin: 0 -6em;
+      margin-top: 5em;
+      z-index: 3; }
+      #services .serv-row .serv-cont .serv-content-list {
+        padding: 2em;
+        background: #ffffff;
+        box-shadow: 0.3em 0.3em 0.4em 0.2em rgba(0, 0, 0, 0.35);
+        text-align: left;
+        transition: all 0.3s ease-in-out; }
+        #services .serv-row .serv-cont .serv-content-list:hover, #services .serv-row .serv-cont .serv-content-list:focus {
+          transform: translateY(-10px); }
+    #services .serv-row:hover .serv-opt-cont, #services .serv-row:focus .serv-opt-cont {
+      background: #FCBAA2;
+      transform: translateY(-10px); }
+    #services .serv-row:hover .serv-cont, #services .serv-row:focus .serv-cont {
+      background: #FCBAA2; }
+      #services .serv-row:hover .serv-cont .serv-content-list, #services .serv-row:focus .serv-cont .serv-content-list {
+        transform: translateY(-10px); }
+  #services #serv-2 {
+    flex-direction: row-reverse; }
+    #services #serv-2 .serv-opt-item .serv-opt-cont {
+      justify-content: flex-end;
+      text-align: right; }
+    #services #serv-2 .serv-cont {
+      margin-left: 0; }
+  #services #serv-3 .serv-cont {
+    margin-top: 6em;
+    margin-left: -3em; }
 
 #references {
   position: relative;
   z-index: 3;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../images/header.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/maps.jpg"); }
+  #references .section-heading {
+    color: rgba(255, 255, 255, 0.9); }
 
 #mapp {
   width: 100%;
@@ -367,20 +345,12 @@ a {
 
 #contact {
   background: #fff;
-  position: relative;
-  z-index: 2;
-  width: 100%; }
-  #contact .section-heading::after {
-    content: "";
-    height: 1px;
-    max-width: 3em;
-    display: block;
-    margin: 0.75em auto;
-    background: #f74300; }
+  position: relative; }
   #contact .contact-info {
     margin-bottom: 5em; }
     #contact .contact-info .contact-info-item i {
-      font-size: 2rem;
+      font-style: normal;
+      font-size: 2.5rem;
       color: #f74300; }
   #contact .middle-item {
     border-left: 1px solid #cfcfcf;
@@ -392,8 +362,13 @@ a {
     #contact #mail input {
       margin: 2em auto;
       border-radius: 0;
-      height: 3.25em;
-      background: #fbfbfb; }
+      border: none;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.87);
+      box-shadow: none;
+      color: rgba(0, 0, 0, 0.87);
+      font-family: "Roboto Condensed";
+      font-size: 1.1rem;
+      height: 3.25em; }
       #contact #mail input:hover, #contact #mail input:focus {
         -moz-box-shadow: none;
         outline: none;
@@ -401,12 +376,14 @@ a {
         box-shadow: none;
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
-        border: 1px solid #f74300; }
+        border-bottom: 3px solid #f74300; }
     #contact #mail #form_text_field {
       border-radius: 0;
+      border: none;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.87);
       margin: 0.75em auto;
       width: 100%;
-      background: #fbfbfb; }
+      color: rgba(0, 0, 0, 0.87); }
       #contact #mail #form_text_field:hover, #contact #mail #form_text_field:focus {
         resize: none;
         outline: none;
@@ -414,21 +391,20 @@ a {
         box-shadow: none;
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
-        border: 1px solid #f74300; }
+        border-bottom: 3px solid #f74300; }
     #contact #mail .btn {
       background: #fff;
-      border: 1px solid #f74300;
+      border: 2px solid rgba(0, 0, 0, 0.87);
       width: 100%;
       color: rgba(0, 0, 0, 0.87);
       font-size: 1.1rem;
       font-weight: 700; }
       #contact #mail .btn:hover, #contact #mail .btn:focus {
-        background: #f74300;
+        border: 3px solid #f74300;
         -webkit-transition: background 0.5s ease-out;
         -moz-transition: background 0.5s ease-out;
         -o-transition: background 0.5s ease-out;
-        transition: background 0.5s ease-out;
-        color: #fff; }
+        transition: background 0.5s ease-out; }
 
 .map-row {
   padding: 0;

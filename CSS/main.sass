@@ -1,5 +1,4 @@
 $main: rgba(#000000, 0.87)
-// $grey: rgba(#000, 0.)
 $text: rgba(#000000, 0.7)
 $shadow: rgba(#000000, 0.35)
 $white:#ffffff
@@ -9,7 +8,8 @@ $light_grey: #ebebeb
 $orange: #f74300
 $nav-title: #b1b1b1
 $input-border-focus: $orange
-
+$uber_light_orange: #FCBAA2
+$uber_light_green: #8cff94
 html, body
   text-rendering: optimizeLegibility
   -webkit-font-smoothing: antialiased
@@ -43,7 +43,7 @@ html, body
 
 .section-heading
   font-family: 'Roboto Condensed'
-  font-size: 1.2rem
+  font-size: 1.3rem
   font-weight: 300
   text-transform: uppercase
   // font-weight: 700
@@ -71,7 +71,7 @@ a
   color: $main
   padding: 0.5em 3.2em
   text-decoration: none
-  text-transform: uppercase
+  // text-transform: uppercase
   border: none
   outline: none
   border-radius: 0
@@ -82,6 +82,32 @@ a
     background: $orange
     text-decoration: none
 
+.btn-row
+  margin: 4em auto
+  .button
+    width: 20%
+    position: relative
+    padding: 0.5rem
+    font-weight: 700
+    color: $main
+    background-color: transparent
+    border: 3px solid $main
+    &:hover, &focus
+      border: 4px solid $orange
+      -webkit-transition: all 0.1s linear
+      -moz-transition: all 0.1s linear
+      -o-transition: all 0.1s linear
+      transition: all 0.1s linear
+  .button::before
+    font-family: 'linea-basic-10'
+    content: "."
+    font-size: 2.3em
+    color: #000
+    position: absolute
+    width: 2rem
+    display: block
+    left: -50px
+    top: -7px
 // =================================================
 // ================= NAVBAR STYLE =================
 // =================================================
@@ -90,6 +116,9 @@ a
   border: none
   .navbar-brand
     color: $whiteish
+    &:hover, &:focus
+      color: $orange
+      transition: color 0.2s ease-in-out
   #navbar-links
     li
       a
@@ -99,8 +128,8 @@ a
         // font-weight: 700
         &:hover, &:focus
           color: $orange
-          transition: color 0.4s ease-in-out
-  // transition: all 0.4s ease-in-out
+          transition: color 0.2s ease-in-out
+  transition: background-color 0.2s linear
 
 
 .nav-fixed
@@ -108,6 +137,7 @@ a
   box-shadow: 0 0.2em 0.5em $shadow
   .navbar-brand
     color: $main
+
   #navbar-links
     li
       a
@@ -121,9 +151,9 @@ a
 // ================= HOME STYLE =================
 // =================================================
 #home
-  background: linear-gradient(rgba(#000, 0.3), rgba(#000, 0.3) ), url("../images/first.jpg")
+  background: linear-gradient(rgba(#000, 0.3), rgba(#000, 0.3) ), url("../images/tatry.jpg")
   background-repeat: no-repeat
-  background-position: center top
+  background-position: center
   background-size: cover
   background-attachment: fixed
   padding: 0
@@ -149,8 +179,7 @@ a
 
     .title
       text-transform: uppercase
-      font-weight: 200
-      font-family: 'Roboto Condensed'
+      // font-family: 'Noto Sans'
       font-size: 6.5rem
       padding: 0.3em
       margin: 0.3em
@@ -158,7 +187,6 @@ a
       border-spacing: 0.3em
 
     .subtitle
-      font-weight: 300
       text-transform: uppercase
       color: $whiteish
       margin-bottom: 0.5em
@@ -168,13 +196,15 @@ a
   .home_button
     // bottom: 15%
     margin-top: 30rem
-    background: $white
-    color: $main
-    font-weight: 700
-    // border: 2px solid $white
+    background-color: transparent
+    color: $whiteish
+    // font-weight: 700
+    border: 3px solid $whiteish
     &:hover, &:focus
+      border: 4px solid $white
       color: $white
-      background: $orange
+
+      // background: $orange
 
 
 
@@ -262,46 +292,11 @@ a
         &:hover
           margin-left: 1.5em
           transition: margin-left 0.5s ease-out
-          -webkit-transition: margin-left 0.5s ease-out
-          -moz-transition: margin-left 0.5s ease-out
-          -o-transition: margin-left 0.5s ease-out
+          -webkit-transition: margin-left 0.4s ease-out
+          -moz-transition: margin-left 0.4s ease-out
+          -o-transition: margin-left 0.4s ease-out
 
-  .btn-row
-    margin: 4em auto
-    text-align: center
-    // align-items: center
-
-    .button
-      width: 20%
-      position: relative
-      padding: 0.5rem
-      font-weight: 700
-      color: $main
-      background: #fff
-      &:hover, &focus
-        background: $orange
-        color: $main
-        -webkit-transition: all 0.5s ease-in-out
-        -moz-transition: all 0.5s ease-in-out
-        -o-transition: all 0.5s ease-in-out
-        transition: all 0.5s ease-in-out
-
-    .button::before
-      font-family: 'linea-basic-10'
-      content: "."
-      font-size: 2em
-      font-weight: 700
-      color: $main
-      position: absolute
-      width: 2rem
-      display: block
-      left: -40px
-      top: -5px
-    &:hover, &:focus
-      color: $orange
-
-
-  #who
+  #in-person
     width: 100%
     background: #fff
 
@@ -310,7 +305,7 @@ a
   position: relative
   z-index: 5
   height: 350px
-  background-image: linear-gradient( rgba($main, 0.8), rgba($main, 0.8) ), url(../images/headerrr.jpg)
+  background-image: linear-gradient( rgba($main, 0.5), rgba($main, 0.5) ), url('../images/maps.jpg')
   color: $whiteish
   i
     font-size: 4rem
@@ -330,109 +325,108 @@ a
 // =================================================
 #services
   background:
-    image: linear-gradient( rgba($uber_light_grey, 0.75), rgba($uber_light_grey, 0.74) ), url("../images/map_big3.jpg")
+    image: linear-gradient( rgba($uber_light_grey, 0.75), rgba($uber_light_grey, 0.74)), url("../images/map_big3.jpg")
     size: cover
     repeat: repeat
     attachment: fixed
-  height: 900
 
   .section-heading
-    text-align: center
+    margin-bottom: 3em
 
-  .options-row
-    padding: 5em
-    .serv-opt-holder
-      .serv-opt
-        padding: 2em
-        height: 100%
-        width: 6em
+  .serv-row
+    margin-bottom: 3em
+    display: flex
+    justify-content: center
+    // justify-content: space-arround
+    .serv-opt-item
+      padding: 0
+      // position: relative
+      // z-index: 1
+      .serv-opt-cont
+        display: flex
+        align-items: flex-end
+        justify-content: flex-start
+        box-shadow: 0.3em 0.3em 0.3em $shadow
         background: #fff
-        display: flex
-        flex-direction: column
-        position: relative
-        cursor: pointer
-        justify-content: center
-        align-items: flex-start
         text-align: left
-        height: 100%
-        width: 100%
-        color: $main
-        &:hover
-          // color: #fff
-          .subtitle, .serv-opt-num
-            color: $whiteish
-          background: $orange
-          transition: all 0.4s ease-out
-
-        .serv-opt-num
-          font-size: 1em
+        margin: 0
+        padding: 1em 2em
+        transform: translateY(0)
+        height: 305px
+        // border: 5px  solid $main
+        &:hover, &:focus
+          transform: translateY(-10px)
+          // border: 5px  solid $orange
+        transition: all 0.3s ease-in-out
+        h2
+          z-index: 1
+          position: relative
+          font-family: "Roboto Condensed"
+          color: $main
+          font-size: 2.5rem
+        .serv-num
+          font-family: 'Roboto'
+          position: absolute
+          z-index: 0
+          font-size: 13rem
           font-weight: 700
-          color: $shadow
-          padding: 0
-          margin: 0
-        .subtitle
-          // font-weight: 700
-          // font-family: 'Roboto Condensed'
-          padding: 0
-          margin: 0
-      .active-option
-        cursor: default
-        background-color: $orange
-        .subtitle
-          color: #fff
-        .serv-opt-num
-          color: $whiteish
-        &:hover
-          background-color: $orange
+          color: $uber_light_grey
 
-      .active-option:after
-        content: ""
-        width: 1.5em
-        height: 1.5em
-        background-color: $orange
-        transform: rotate(45deg)
-        position: absolute
-        left: 15%
-        bottom: -6%
+    .serv-cont
+      margin: 0 -6em
+      margin-top: 5em
+      z-index: 3
+      .serv-content-list
+        padding: 2em
+        background: $white
 
-  .shown-serv-row
-    width: 100%
-    background: #fff
-    color: $text
-    font-size: 1.1rem
-    display: none
-    .shown-serv
-      // height: 490px
-      position: relative
-      margin: 0 auto
-      display: none
-      justify-content: center
-      width: 55%
-      .shown-serv-content
-        padding: 3em
-        display: flex
-        flex-direction: row
-        justify-content: space-around
-        align-items: center
-        text-align: left
-
-        .shown-serv-num
-          font-size: 4rem
-          font-weight: 700
-          color: $shadow
-          color: $light_grey
-      h2
+        // height: 305px
+        box-shadow: 0.3em 0.3em 0.4em 0.2em $shadow
         // margin: 0
-        // padding: 0.3em
-        font-family: "Roboto Condensed"
-        color: $main
-        font-size: 2.3rem
-      .text
-        // padding-left: 5em
-        margin-left: 4em
-        font-size: 1.1rem
-        li
-          margin-bottom: 0.2em
+        // background: $white
+        text-align: left
+        &:hover, &:focus
+          transform: translateY(-10px)
+          // background: $uber_light_orange
+        transition: all 0.3s ease-in-out
+
+    &:hover, &:focus
+      .serv-opt-cont
+        background: $uber_light_orange
+        transform: translateY(-10px)
+
+        // background: $orange
+      .serv-cont
+        background: $uber_light_orange
+        // background: $uber_light_grey
+        // background: $orange
+        .serv-content-list
+          transform: translateY(-10px)
+
+
+
+
+  #serv-1
+    // justify-content: flex-start
+
+  #serv-2
+    flex-direction: row-reverse
+    // justify-content: flex-start
+    .serv-opt-item
+      .serv-opt-cont
+        justify-content: flex-end
+        text-align: right
+    .serv-cont
+      margin-left: 0
+
+  #serv-3
+    .serv-cont
+      margin-top: 6em
+      margin-left: -3em
+    // justify-content: center
+
+
+
 
 
 
@@ -442,8 +436,9 @@ a
 #references
   position: relative
   z-index: 3
-  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ),url(../images/header.jpg)
-
+  background-image: linear-gradient( rgba($main, 0.4), rgba($main, 0.4) ),url('../images/maps.jpg')
+  .section-heading
+    color: $whiteish
 
 #mapp
   width: 100%
@@ -455,24 +450,16 @@ a
 // =================================================
 #contact
   background: #fff
-
   position: relative
-  z-index: 2
-  width: 100%
-  // margin-bottom: 400px
+  // z-index: 2
+  // width: 100%
 
-  .section-heading::after
-    content: ''
-    height: 1px
-    max-width: 3em
-    display: block
-    margin: 0.75em auto
-    background: $orange
   .contact-info
     margin-bottom: 5em
     .contact-info-item
       i
-        font-size: 2rem
+        font-style: normal
+        font-size: 2.5rem
         color: $orange
       .text-content
   .middle-item
@@ -486,8 +473,15 @@ a
     input
       margin: 2em auto
       border-radius: 0
+      border: none
+      border-bottom: 2px solid $main
+      box-shadow: none
+      color: $main
+      font-family: 'Roboto Condensed'
+      font-size: 1.1rem
+      // font-weight: 700
       height: 3.25em
-      background: #fbfbfb
+      // text-align: left
       &:hover, &:focus
         -moz-box-shadow: none
         outline: none
@@ -495,13 +489,15 @@ a
         box-shadow: none
         -webkit-box-shadow: none
         -moz-box-shadow: none
-        border: 1px solid $orange
+        border-bottom: 3px solid $orange
 
     #form_text_field
       border-radius: 0
+      border: none
+      border-bottom: 2px solid $main
       margin: 0.75em auto
       width: 100%
-      background: #fbfbfb
+      color: $main
       &:hover, &:focus
         resize: none
         outline: none
@@ -509,23 +505,25 @@ a
         box-shadow: none
         -webkit-box-shadow: none
         -moz-box-shadow: none
-        border: 1px solid $orange
+        border-bottom: 3px solid $orange
 
     .btn
       background: #fff
-      border: 1px solid $orange
+      border: 2px solid $main
       width: 100%
       color: $main
       font-size: 1.1rem
       font-weight: 700
       &:hover, &:focus
         // box-shadow: 0 0.5rem 0.5em rgba(0,0,0,.15)
-        background: $orange
+        border: 3px solid $orange
+
+        // background: $orange
         -webkit-transition: background 0.5s ease-out
         -moz-transition: background 0.5s ease-out
         -o-transition: background 0.5s ease-out
         transition: background 0.5s ease-out
-        color: #fff
+        // color: #fff
 
 .map-row
   padding: 0
