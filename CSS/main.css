@@ -284,10 +284,7 @@ a {
         margin: 0;
         padding: 1em 2em;
         transform: translateY(0);
-        height: 305px;
-        transition: all 0.3s ease-in-out; }
-        #services .serv-row .serv-opt-item .serv-opt-cont:hover, #services .serv-row .serv-opt-item .serv-opt-cont:focus {
-          transform: translateY(-10px); }
+        height: 305px; }
         #services .serv-row .serv-opt-item .serv-opt-cont h2 {
           z-index: 1;
           position: relative;
@@ -309,17 +306,16 @@ a {
         padding: 2em;
         background: #ffffff;
         box-shadow: 0.3em 0.3em 0.4em 0.2em rgba(0, 0, 0, 0.35);
-        text-align: left;
-        transition: all 0.3s ease-in-out; }
-        #services .serv-row .serv-cont .serv-content-list:hover, #services .serv-row .serv-cont .serv-content-list:focus {
-          transform: translateY(-10px); }
-    #services .serv-row:hover .serv-opt-cont, #services .serv-row:focus .serv-opt-cont {
-      background: #FCBAA2;
-      transform: translateY(-10px); }
-    #services .serv-row:hover .serv-cont, #services .serv-row:focus .serv-cont {
-      background: #FCBAA2; }
-      #services .serv-row:hover .serv-cont .serv-content-list, #services .serv-row:focus .serv-cont .serv-content-list {
+        text-align: left; }
+    #services .serv-row:hover, #services .serv-row:focus {
+      transition: all 0.3s ease-in-out; }
+      #services .serv-row:hover .serv-opt-cont, #services .serv-row:focus .serv-opt-cont {
+        background: #FCBAA2;
         transform: translateY(-10px); }
+      #services .serv-row:hover .serv-cont, #services .serv-row:focus .serv-cont {
+        background: #FCBAA2; }
+        #services .serv-row:hover .serv-cont .serv-content-list, #services .serv-row:focus .serv-cont .serv-content-list {
+          transform: translateY(-10px); }
   #services #serv-2 {
     flex-direction: row-reverse; }
     #services #serv-2 .serv-opt-item .serv-opt-cont {
