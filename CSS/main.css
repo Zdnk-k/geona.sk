@@ -32,7 +32,7 @@ html, body {
   font-family: "Roboto";
   font-size: 1.3rem;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 5 0;
   margin: 6em 0 2em 0; }
 
 .section-heading::after {
@@ -280,7 +280,7 @@ a {
         display: flex;
         align-items: flex-end;
         justify-content: flex-start;
-        box-shadow: 0.3em 0.3em 0.3em rgba(0, 0, 0, 0.35);
+        box-shadow: 0.1em 0.3em 0.5em 0.2em rgba(0, 0, 0, 0.35);
         background: #fff;
         text-align: left;
         margin: 0;
@@ -307,9 +307,9 @@ a {
       z-index: 0;
       transition: all 0.4s ease-out; }
       #services .serv-row .serv-cont .serv-content-list {
+        background: #f8f8f8;
         padding: 2em;
-        background: #ffffff;
-        box-shadow: 0.3em 0.3em 0.4em 0.2em rgba(0, 0, 0, 0.35);
+        box-shadow: 0.1em 0.1em 0.4em rgba(0, 0, 0, 0.35);
         text-align: left;
         transform: translateY(0);
         transition: all 0.4s ease-out; }
@@ -317,11 +317,14 @@ a {
       z-index: 0;
       transform: translateY(5px);
       transition: all 0.4s ease-in-out;
-      background: #FCBAA2; }
+      background: #FCBAA2;
+      box-shadow: 0.1em 0.1em 0.4em rgba(0, 0, 0, 0.35); }
     #services .serv-row:hover .serv-cont, #services .serv-row:focus .serv-cont {
       z-index: 2;
       transition: all 0.4s ease-out; }
       #services .serv-row:hover .serv-cont .serv-content-list, #services .serv-row:focus .serv-cont .serv-content-list {
+        background: #ffffff;
+        box-shadow: 0 0.3em 0.5em 0.2em rgba(0, 0, 0, 0.35);
         transform: translateY(-10px);
         transition: all 0.4s ease-in-out; }
   #services #serv-2 {

@@ -44,7 +44,7 @@ html, body
   font-family: 'Roboto'
   font-size: 1.3rem
   text-transform: uppercase
-  font-weight: 400
+  font-weight: 5  00
   margin: 6em 0 2em 0
 
 .section-heading::after
@@ -353,7 +353,7 @@ a
         display: flex
         align-items: flex-end
         justify-content: flex-start
-        box-shadow: 0.3em 0.3em 0.3em $shadow
+        box-shadow: 0.1em 0.3em 0.5em 0.2em $shadow
         background: #fff
         text-align: left
         margin: 0
@@ -383,14 +383,14 @@ a
       z-index: 0
       transition: all 0.4s ease-out
       .serv-content-list
+        background: $uber_light_grey
         padding: 2em
-        background: $white
         // height: 305px
-        box-shadow: 0.3em 0.3em 0.4em 0.2em $shadow
+        box-shadow: 0.1em 0.1em 0.4em $shadow
         text-align: left
         transform: translateY(0)
         transition: all 0.4s ease-out
-        
+
 
     &:hover, &:focus
       .serv-opt-cont
@@ -398,6 +398,8 @@ a
         transform: translateY(5px)
         transition: all 0.4s ease-in-out
         background: $uber_light_orange
+        box-shadow: 0.1em 0.1em 0.4em $shadow
+
         h2
           // font-weight: 700
         .serv-num
@@ -410,6 +412,8 @@ a
         z-index: 2
         transition: all 0.4s ease-out
         .serv-content-list
+          background: $white
+          box-shadow: 0 0.3em 0.5em 0.2em $shadow
           transform: translateY(-10px)
           transition: all 0.4s ease-in-out
 
